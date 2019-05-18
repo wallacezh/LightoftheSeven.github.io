@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Light of the Seven&#39;s blog">
 <meta property="og:description" content="计算机系统概述通用操作系统使用时间片轮转调度算法，用户运行程序并不需要预先预定运行时间 操作系统执行程序时，必须从起始地址开始执行 了提高系统利用率和吞吐量而提出的。IV正确： I/0通道实际上是 种特殊的处理器，它具有执行1/0指令的能力，并通过执行通道程序来控制I/0操作。 系统调用需要触发 trap 指令，如基于 x86 的 Linux 系统，该指令为 int Ox80 或 sysenter">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-18T07:21:24.638Z">
+<meta property="og:updated_time" content="2019-05-18T11:59:29.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操作系统解析中易忘的知识点">
 <meta name="twitter:description" content="计算机系统概述通用操作系统使用时间片轮转调度算法，用户运行程序并不需要预先预定运行时间 操作系统执行程序时，必须从起始地址开始执行 了提高系统利用率和吞吐量而提出的。IV正确： I/0通道实际上是 种特殊的处理器，它具有执行1/0指令的能力，并通过执行通道程序来控制I/0操作。 系统调用需要触发 trap 指令，如基于 x86 的 Linux 系统，该指令为 int Ox80 或 sysenter">
@@ -213,7 +213,34 @@
 </blockquote>
 <p>发出请求是在用户态，而对系统调用相应处理是在核心态进行</p>
 <p>陷入指令是唯一一个只能在用户态<strong>执行</strong>，而不可在核心态执行的指令</p>
+<p>陷入/trap/房管 是一个意思</p>
 <a id="more"></a>
+<p>c语言-&gt;翻译-&gt;机器能识别的指令</p>
+<p>两种不同的处理器状态 管态目态是由程序状态字寄存器(PSW)中的某标志位标志此时CPU处于哪种状态，0：用户态，1：核心态</p>
+<p>发生中意味着需要操作系统介入</p>
+<p>不同的操作系统，内核功能的划分是不一样的，由此引出了操作系统体系结构的问题。</p>
+<p>陷入也称异常，系统调用的访管指令</p>
+<p>1外中断IO操作完成，一般是外部打扰，用户强行中止一个进程</p>
+<blockquote>
+<p>外部中断的处理过程</p>
+<ol>
+<li>执行完每个指令之后，CPU都要例行检查当前是否有外部中断信号需要处理，如果没有外部中断指令，他就会执行下一条指令</li>
+<li>如果监测到外部中断信号，则需要保护被中断进程的CPU环境，(如程序状态字PSW，程序计数器PC、各种通用寄存器)：游戏进度存档</li>
+</ol>
+</blockquote>
+<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><p>单道程序：程序段一般放在低地址部分，数据段一般存在高地址部分(如变量)</p>
+<p>处理器相关信息，各种寄存器的值，当进程切换时需要把当前的运行情况记录下来保存在PCB中，如程序计数器的值表示了当前程序执行到了哪一句</p>
+<p>CPU是计算机中最昂贵的部件，需要先将其他进程需要的资源分配到位才能得到CPU的服务</p>
+<p>运行态到阻塞态是主动行为，就绪到运行是被动行为</p>
+<p>系统在发生死锁时进程全部处于阻塞，或者无进程任务，系统中若同时存在10个进程，则有可能10个进程处于阻塞。</p>
+<p> 在进程的整个生命周期中，系统总是通过PCB来对进程进行控制，PCB常驻内存</p>
+<p> 程序封闭性是指，进程执行结果只取决于进程本身，不受外界影响，进程怎么执行别人都不会影响他的结果，而失去封闭性，不同速度下的执行结果则不同。</p>
+<p> 进程有他的生命周期，不一定需要显式撤销，不会一直存在于系统中，。</p>
+<p> <strong>进程是资源分配的基本单位，线程是处理器调度和分派的基本单位，线程本身不具备资源</strong></p>
+<p> 操作系统只看得见内核级线程，因此只有内核级线程才是处理机分配的单位。</p>
+<blockquote>
+<p>比如一个进程有两个内核级线程，三个用户级线程，<br>在用户看来，这个进程有三个线程，<br>但即使该进程在一个4核处理机的计算机上运行，也最多被分配到两个核<br>最多有两个用户线程并行执行</p>
+</blockquote>
 
   
 
@@ -330,8 +357,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2019/05/12/操作系统解析中易忘的知识点/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">操作系统解析中易忘的知识点</div>
+    <a href="/2019/05/07/leetcode-PAT刷题群/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">leetcode、PAT刷题群</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -358,7 +385,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机系统概述"><span class="toc-number">1.</span> <span class="toc-text">计算机系统概述</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机系统概述"><span class="toc-number">1.</span> <span class="toc-text">计算机系统概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进程"><span class="toc-number">2.</span> <span class="toc-text">进程</span></a></li></ol>
                     </div>
                 </span>
             </div>

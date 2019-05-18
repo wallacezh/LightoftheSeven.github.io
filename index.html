@@ -209,6 +209,7 @@
 </blockquote>
 <p>发出请求是在用户态，而对系统调用相应处理是在核心态进行</p>
 <p>陷入指令是唯一一个只能在用户态<strong>执行</strong>，而不可在核心态执行的指令</p>
+<p>陷入/trap/房管 是一个意思</p>
         
           <a class="article-more-a" href="/2019/05/12/操作系统解析中易忘的知识点-1/#more">more >></a>
         
@@ -235,106 +236,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/05/12/操作系统解析中易忘的知识点-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '8f3a5336c7cd17cf678e',
-  	clientSecret: 'bde98e5f0ed9f4939457fbf51faa7c3b63b0b6bd',
-  	repo: 'wzr1005.github.io',
-  	owner: 'wzr1005',
-  	admin: ['wzr1005'],
-  	id: '',
-  	distractionFreeMode: 'false'
-})
-gitalk.render('gitalk-container')
-}
-</script>
-
-  
-
-  
-    <article id="post-操作系统解析中易忘的知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/12/操作系统解析中易忘的知识点/">操作系统解析中易忘的知识点</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/12/操作系统解析中易忘的知识点/" class="archive-article-date">
-  	<time datetime="2019-05-12T13:41:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      <div id="busuanzi_container_page_pv" style="font-size:16px;color:rgb(153,153,153);line-height:1.8em;">总阅读量<span id="busuanzi_value_page_pv"></span>次</div>
-    <h3 id="计算机系统概述"><a href="#计算机系统概述" class="headerlink" title="计算机系统概述"></a>计算机系统概述</h3><p>通用操作系统使用时间片轮转调度算法，用户运行程序并不需要预先预定运行时间</p>
-<p>操作系统执行程序时，必须从起始地址开始执行</p>
-<p>了提高系统利用率和吞吐量而提出的。IV正确： I/0通道实际上是 种特殊的处理器，它具有执<br>行1/0指令的能力，并通过执行通道程序来控制I/0操作。</p>
-<p>系统调用需要触发 trap 指令，如基于 x86 的 Linux 系统，该指令为 int Ox80 或 sysenter</p>
-
-  
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/12/操作系统解析中易忘的知识点/">展开全文 >></a>
         </p>
       
 
@@ -1655,6 +1556,107 @@ gitalk.render('gitalk-container')
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/03/12/Queueing-at-Bank银行排队的问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '8f3a5336c7cd17cf678e',
+  	clientSecret: 'bde98e5f0ed9f4939457fbf51faa7c3b63b0b6bd',
+  	repo: 'wzr1005.github.io',
+  	owner: 'wzr1005',
+  	admin: ['wzr1005'],
+  	id: '',
+  	distractionFreeMode: 'false'
+})
+gitalk.render('gitalk-container')
+}
+</script>
+
+  
+
+  
+    <article id="post-动态规划01背包问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/09/动态规划01背包问题/">动态规划01背包问题&amp;&amp;完全背包</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/09/动态规划01背包问题/" class="archive-article-date">
+  	<time datetime="2019-03-09T07:41:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="01背包问题"><a href="#01背包问题" class="headerlink" title="01背包问题"></a>01背包问题</h1><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=4883328&auto=1&height=66"></iframe><br>01背包问题是这样的：<br>    有n件物品，每件物品的重量为w[i]，价值为c[i],现有一个容量为V的背包，问如何选取物品放入背包，使得背包内物品的总价值最大。其中每个物品都只有一件。<br>样例：<br>4 8     // n == 4, V == 8<br>2 3 4 5 //w[i]<br>3 4 5 6 //c[i]<br>怎么解？算出c[i]/w[i]能不能行？不行，因为每种物品只有一个，先考虑单价高的可能会装不满，未必是最优的。</p>
+<p>暴力枚举？那每种物品都有两种选择，do or not,因此n件物品就有2^n种情况，</p>
+<p>这里就需要用到dp[i][v]，其中i表示第几件物品，而v表示<strong>注意是当前背包容量，如果要放入物品i,v应该减去w[i]，容量变少</strong><br>dp[i][j] 边界都初始化为0，从1，1开始。dp[i][v]表示前i件物品恰好装入容量为v的背包中所能获得的最大值/?存疑</p>
+<p>我们考虑第i件物品的时候，就两种策略：放呢，还是不放呢？</p>
+        
+          <a class="article-more-a" href="/2019/03/09/动态规划01背包问题/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/09/动态规划01背包问题/">展开全文 >></a>
         </p>
       
 
