@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Light of the Seven&#39;s blog">
 <meta property="og:description" content="计算机系统概述通用操作系统使用时间片轮转调度算法，用户运行程序并不需要预先预定运行时间 操作系统执行程序时，必须从起始地址开始执行 了提高系统利用率和吞吐量而提出的。IV正确： I/0通道实际上是 种特殊的处理器，它具有执行1/0指令的能力，并通过执行通道程序来控制I/0操作。 系统调用需要触发 trap 指令，如基于 x86 的 Linux 系统，该指令为 int Ox80 或 sysenter">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-18T11:59:29.401Z">
+<meta property="og:updated_time" content="2019-05-20T09:49:25.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操作系统解析中易忘的知识点">
 <meta name="twitter:description" content="计算机系统概述通用操作系统使用时间片轮转调度算法，用户运行程序并不需要预先预定运行时间 操作系统执行程序时，必须从起始地址开始执行 了提高系统利用率和吞吐量而提出的。IV正确： I/0通道实际上是 种特殊的处理器，它具有执行1/0指令的能力，并通过执行通道程序来控制I/0操作。 系统调用需要触发 trap 指令，如基于 x86 的 Linux 系统，该指令为 int Ox80 或 sysenter">
@@ -239,7 +239,11 @@
 <p> <strong>进程是资源分配的基本单位，线程是处理器调度和分派的基本单位，线程本身不具备资源</strong></p>
 <p> 操作系统只看得见内核级线程，因此只有内核级线程才是处理机分配的单位。</p>
 <blockquote>
-<p>比如一个进程有两个内核级线程，三个用户级线程，<br>在用户看来，这个进程有三个线程，<br>但即使该进程在一个4核处理机的计算机上运行，也最多被分配到两个核<br>最多有两个用户线程并行执行</p>
+<p>比如一个进程有两个内核级线程，三个用户级线程，<br>在用户看来，这个进程有三个线程，<br>但即使该进程在一个4核处理机的计算机上运行，也最多被分配到两个核<br>最多有两个用户线程并行执行(只有两个内核级线程)</p>
+</blockquote>
+<p>那这个就可以理解了：多对一模型</p>
+<blockquote>
+<p>多个用户级线程映射到一个内核级线程，每个用户线程只对应(分配)一个内核级线程<br>优点：用户级线程在用户空间即可完成，不需要切换到核心态，线程管理系统开销小，效率高<br>缺点：正在用户级线程发生了阻塞，会导致整个进程阻塞，<br>不能在多核处理器上并行执行，因为只有一个内核级线程，<br>并发度不高</p>
 </blockquote>
 
   
@@ -355,6 +359,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/05/27/关于vs2017创建模板/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          关于Vs2017创建模板
+        
+      </div>
+    </a>
   
   
     <a href="/2019/05/07/leetcode-PAT刷题群/" id="article-nav-older" class="article-nav-link-wrap">
@@ -564,19 +577,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">树状数组</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">python3.7</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">树状数组</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
             
               <li class="article-tag-list-item">
