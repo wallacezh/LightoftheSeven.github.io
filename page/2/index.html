@@ -165,6 +165,110 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Queueing-at-Bank银行排队的问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/12/Queueing-at-Bank银行排队的问题/">Queueing at Bank银行排队的问题</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/12/Queueing-at-Bank银行排队的问题/" class="archive-article-date">
+  	<time datetime="2019-03-11T16:54:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://pintia.cn/problem-sets/994805342720868352/problems/994805491530579968" target="_blank" rel="noopener">1017 Queueing at Bank</a><br><img src="https://i.loli.net/2019/03/12/5c8692f018de3.jpeg"><br>看到这种题不用慌，这不是操作系统里面废实现，但代码写起来还是有点别扭，原因还是代码写得少，</p>
+<p>这种题目很考验基本功，还有耐心，如果写多了，这种题也不会太难，但我今天还是写的蛮慢的，所以记录一下，</p>
+<p>这里先解释一下为什么要用endTime数组呢，<strong>因为窗口可能有多个，每个初始化为上班时间8点，</strong></p>
+<p>这个遍历的结果就是看哪个窗口能早一点结束，用idx比较</p>
+<p>然后再与经过sort排序的custom（到达时间由早到晚）比较大小，</p>
+<p>如果顾客来早了(comTime &lt; endTime[idx]，就用tottime统计起来，<strong>这个值就是最后要计算的</strong></p>
+<h2 id="如果顾客来的时候窗口已经空闲，那么直接更新这个窗口endTime-idx-Custom-i-comTime-Custom-i-serveTime"><a href="#如果顾客来的时候窗口已经空闲，那么直接更新这个窗口endTime-idx-Custom-i-comTime-Custom-i-serveTime" class="headerlink" title="如果顾客来的时候窗口已经空闲，那么直接更新这个窗口endTime[idx] = Custom[i].comTime + Custom[i].serveTime;"></a>如果顾客来的时候窗口已经空闲，那么<strong>直接更新这个窗口</strong>endTime[idx] = Custom[i].comTime + Custom[i].serveTime;</h2><p>这种题做完了别那么快过，自己多码几遍，学习没有捷径，唯有熟练，另外多记录多想。<br>
+        
+          <a class="article-more-a" href="/2019/03/12/Queueing-at-Bank银行排队的问题/#more">more >></a>
+        
+      
+
+      
+    </p></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/12/Queueing-at-Bank银行排队的问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '8f3a5336c7cd17cf678e',
+  	clientSecret: 'bde98e5f0ed9f4939457fbf51faa7c3b63b0b6bd',
+  	repo: 'wzr1005.github.io',
+  	owner: 'wzr1005',
+  	admin: ['wzr1005'],
+  	id: '',
+  	distractionFreeMode: 'false'
+})
+gitalk.render('gitalk-container')
+}
+</script>
+
+  
+
+  
     <article id="post-动态规划01背包问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1616,115 +1720,6 @@ gitalk.render('gitalk-container')
   
 
   
-    <article id="post-学习github" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/24/学习github/">学习Github</a>
-    </h1>
-  
-
-        
-        <a href="/2019/02/24/学习github/" class="archive-article-date">
-  	<time datetime="2019-02-24T06:48:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="为什么要学习github"><a href="#为什么要学习github" class="headerlink" title="为什么要学习github"></a>为什么要学习github</h1><h3 id="当你一切搞定之后，就是日常三部曲"><a href="#当你一切搞定之后，就是日常三部曲" class="headerlink" title="当你一切搞定之后，就是日常三部曲"></a>当你一切搞定之后，就是日常三部曲</h3><pre><code>$ git add .
-
-$ git commit -m -a
-
-$ git push origin hexo
-</code></pre><p>再也不用担心备份或者删库的问题</p>
-<p>关联远程库：</p>
-<pre><code>$ git remote add origin https://github.com/wallacezh/patcode.git
-</code></pre><p> ! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘<a href="https://github.com/wallacezh/patcode.git&#39;" target="_blank" rel="noopener">https://github.com/wallacezh/patcode.git&#39;</a></p>
-<p>本地强制上传到远程，把远程的覆盖</p>
-<pre><code>$ git push origin master -f
-</code></pre><h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h2>
-        
-          <a class="article-more-a" href="/2019/02/24/学习github/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/24/学习github/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '8f3a5336c7cd17cf678e',
-  	clientSecret: 'bde98e5f0ed9f4939457fbf51faa7c3b63b0b6bd',
-  	repo: 'wzr1005.github.io',
-  	owner: 'wzr1005',
-  	admin: ['wzr1005'],
-  	id: '',
-  	distractionFreeMode: 'false'
-})
-gitalk.render('gitalk-container')
-}
-</script>
-
-  
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1851,6 +1846,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">vs</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
@@ -1875,14 +1874,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">python3.7</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
@@ -1895,11 +1886,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">vs</a>
+                <a href="javascript:void(0)" class="js-tag color5">python3.7</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
             
             <div class="clearfix"></div>
