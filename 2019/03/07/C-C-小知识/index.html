@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/03/26/5c9a21e3c65ba.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/22/5c947a90ee5c9.png">
-<meta property="og:updated_time" content="2020-05-28T00:22:06.877Z">
+<meta property="og:updated_time" content="2020-06-13T04:48:18.855Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C&#x2F;C++小知识">
 <meta name="twitter:description" content="scanf(&amp;quot;%[^\n]&amp;quot;, &amp;amp;a) 遇到回车结束。 memset头文件 #include &amp;lt;cstring&amp;gt; vector&amp;lt;vector    v.size()是行数，v[0].size() 是列数 如果是定义的 char s[maxn];,里面可能会出现空格，那么这样输入 scanf(&amp;quot;%[^\n]&amp;quot;, s); 关闭同步 st">
@@ -257,7 +257,8 @@
 <p>#define和const 相比有如下劣势：<br>1.const定义常量是有数据类型的，而#define宏定义常量却没有<br>2.const常量有数据类型，而宏常量没有数据类型。编译器可以对const进行类型安全检查，<br>   而对后者只进行字符替换，没有类型安全检查，并且在字符替换中可能会产生意料不到的错误<br>3.有些集成化的调试工具可以对const常量进行调试，但是不能对宏常量进行调试。</p>
 <p>2&gt;C中struct是没有权限的设置的,C++中,struct的成员默认访问说明符为public（为了与C兼容）也可以自己设置访问权限，class中的默认访问限定符为private</p>
 <p>在用模版的时候只能写template <class type>或template <typename type>不能写template <struct type></struct></typename></class></p>
-<p>int len; cin&gt;&gt;len; int *p = new int[len];</p>
+<p>int len; cin&gt;&gt;len; int <em>p = new int[len];</em></p>
+<p>或者 vector<int> p(len);</int></p>
 </int>
   
 
@@ -548,10 +549,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">考研</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
@@ -576,6 +573,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">考研</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
@@ -588,11 +589,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">－　考研</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">堆</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">－　考研</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -608,14 +617,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">atom</a>
               </li>
             
@@ -624,7 +625,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
