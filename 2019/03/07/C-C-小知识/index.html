@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/03/26/5c9a21e3c65ba.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/22/5c947a90ee5c9.png">
-<meta property="og:updated_time" content="2019-03-28T09:26:12.233Z">
+<meta property="og:updated_time" content="2020-05-28T00:22:06.877Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C&#x2F;C++小知识">
 <meta name="twitter:description" content="scanf(&amp;quot;%[^\n]&amp;quot;, &amp;amp;a) 遇到回车结束。 memset头文件 #include &amp;lt;cstring&amp;gt; vector&amp;lt;vector    v.size()是行数，v[0].size() 是列数 如果是定义的 char s[maxn];,里面可能会出现空格，那么这样输入 scanf(&amp;quot;%[^\n]&amp;quot;, s); 关闭同步 st">
@@ -251,6 +251,13 @@
 <p>struct或class关键字定义一个类，定义的类就是一个数据类型<br>student stu;<br>student<em> p = &stu;<br>(</em> p).name = “LIMING”;//* p就是指向变量stu;<br>p-&gt;score = 78;//p指向的类对象的成员score<br>student stuidents[3]; p = student + 2;//指向第三个student对象<br>struct student{<br>  string name;<br>  double score;<br>  void print();<br>};<br>void student::print(){//student就是类作用域，print()是student类的成员函数<br>  cout&lt;&lt;name&lt;&lt;” “&lt;&lt;score&lt;&lt;’\n’;<br>}</p>
 <h4 id="this指针"><a href="#this指针" class="headerlink" title="this指针"></a>this指针</h4><p>struct student{<br>  string name;<br>  double score;<br>  void print(){<br>    cout&lt;<this->name&lt;&lt;” “&lt;<this->score&lt;&lt;’\n’<br>  }<br>}<br>struct和class的区别：<br>struct里的成员默认是public(公开的)<br>class里的成员默认是private(私有的)<br>class student{<br>  public://这样不太安全，任意函数都可以修改类里面的成员，一般去掉这句<br>  string name;<br>  double score;<br>public:<br>  void print(){<br>    cout&lt;<this->name&lt;&lt;” “&lt;<this->score&lt;&lt;’\n’<br>  }<br>  get_name(){return name’}<br>  get_score(){return score;}<br>  void set_name(string n) {name = n;}<br>  void set_score(double s) {score = s;}<br>}<br>在main函数里面修改成员值<br>set_name(“LIMING”);<br>set_score(78.5);<br>stu.print();</this-></this-></this-></this-></p>
 <p>friend 友元函数，写作class里面，说明friend是class的友元函数，于是这个函数就可以访问该class的变量。</p>
+<p>关于静态变量， static变量，如果想把某个变量的值留作下次调用的时候用，如递归调用，可以用全局变量或者static变量，然而全局变量会有很多问题，会占用全局的资源，stati释放</p>
+<p>以节省内存，因为它是所有对象所公有的，因此，对多个对象来说，静态数据成员只存储一处，供所有对象共用。静态数据成员的值对每个对象都是一样，但它的值是可以更新的。只要对静态数据成员的值更新一次，保证所有对象存取更新后的相同的值，这样可以提高时间效率</p>
+<p>动态全局变量，静态全局变量，静态局部变量的生命周期都是整个程序运行期间，跟函数设计没有关系</p>
+<p>#define和const 相比有如下劣势：<br>1.const定义常量是有数据类型的，而#define宏定义常量却没有<br>2.const常量有数据类型，而宏常量没有数据类型。编译器可以对const进行类型安全检查，<br>   而对后者只进行字符替换，没有类型安全检查，并且在字符替换中可能会产生意料不到的错误<br>3.有些集成化的调试工具可以对const常量进行调试，但是不能对宏常量进行调试。</p>
+<p>2&gt;C中struct是没有权限的设置的,C++中,struct的成员默认访问说明符为public（为了与C兼容）也可以自己设置访问权限，class中的默认访问限定符为private</p>
+<p>在用模版的时候只能写template <class type>或template <typename type>不能写template <struct type></struct></typename></class></p>
+<p>int len; cin&gt;&gt;len; int *p = new int[len];</p>
 </int>
   
 
@@ -553,6 +560,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">python 3.7</a>
               </li>
             
@@ -589,15 +600,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">python3.7</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
             
               <li class="article-tag-list-item">
