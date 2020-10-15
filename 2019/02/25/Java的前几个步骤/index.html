@@ -18,7 +18,7 @@
 <meta property="og:description" content="学习软件工程必须要会的一些Java知识主方法入口：所有的 Java 程序由 public static void main(String []args) 方法开始执行。  像其他语言一样，Java可以使用修饰符来修饰类中方法和属性。主要有两类修饰符： 访问控制修饰符 : default, public , protected, private 非访问控制修饰符 : final, abstract,">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/08/04/Y6hjbXwJcHqWv3k.jpg">
-<meta property="og:updated_time" content="2020-01-10T07:16:01.115Z">
+<meta property="og:updated_time" content="2020-06-27T04:20:05.691Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java的前几个步骤">
 <meta name="twitter:description" content="学习软件工程必须要会的一些Java知识主方法入口：所有的 Java 程序由 public static void main(String []args) 方法开始执行。  像其他语言一样，Java可以使用修饰符来修饰类中方法和属性。主要有两类修饰符： 访问控制修饰符 : default, public , protected, private 非访问控制修饰符 : final, abstract,">
@@ -268,6 +268,14 @@
 <li><p>本地方法栈 (Native Method stack): 与操作系统相关</p>
 </li>
 </ol>
+<p>string(arr);字符变成数组</p>
+<p>String ：String的值是不可变的，这就导致每次对String的操作都会生成新的String对象，不仅效率低下，而且浪费大量优先的内存空间</p>
+<p>StringBuffer ：StringBuffer是可变类，和线程安全的字符串操作类，任何对它指向的字符串的操作都不会产生新的对象。每个StringBuffer对象都有一定的缓冲区容量，当字符串大小没有超过容量时，不会分配新的容量，当字符串大小超过容量时，会自动增加容量</p>
+<p>StringBuilder：可变类，速度更快</p>
+<p>当对字符串进行修改的时候，特别是字符串对象经常改变的情况下，需要使用 StringBuffer 和 StringBuilder 类。和 String 类不同的是，StringBuffer 和 StringBuilder 类的对象能够被多次的修改，并且不产生新的未使用对象。</p>
+<p>StringBuffer(strs[i].reverse().tostring())  tostring可以转成string类</p>
+<p>trim()的作用是去掉字符串两端的多余的空格,注意,是两端的空格,且无论两端的空格有多少个都会去掉,</p>
+<p>String toString(int i) integer x=5, x.tostring()</p>
 <ol start="5">
 <li>寄存器(pc Register):  与CPU相关</li>
 </ol>
@@ -565,6 +573,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">考研</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
             
@@ -585,10 +597,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">考研</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
@@ -601,23 +609,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">－　考研</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">堆</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
+                <a href="javascript:void(0)" class="js-tag color5">－　考研</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">树状数组</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -629,6 +633,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">atom</a>
               </li>
             
@@ -637,7 +645,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
             
             <div class="clearfix"></div>
