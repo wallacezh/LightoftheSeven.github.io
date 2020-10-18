@@ -19,7 +19,7 @@
 <meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201018141002293.png">
 <meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201018153750457.png">
 <meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201018154620702.png">
-<meta property="og:updated_time" content="2020-10-18T11:52:38.039Z">
+<meta property="og:updated_time" content="2020-10-18T13:47:30.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java短视频小程序开发全栈式实战项目">
 <meta name="twitter:description" content="创建于2020年10月15日 小程序必备技术点HTML、CSS、JavaScript 并不是所有app都适应小程序  基于腾讯庞大的社交群体，可以为原生app导流 创业公司优先推出小程序，开发成本低 当作简单的工具使用，需要在app上频繁的crud不适用">
@@ -312,8 +312,253 @@
 <p>flex-direction：排列方向</p>
 <p>flex-wrap:换行规则</p>
 <p>justify-content:对齐方式</p>
+<blockquote>
+<p>flex-start  左开始</p>
+<p>flex-end   右对齐</p>
+<p>center</p>
+<p>space-between 字间距</p>
+</blockquote>
 </li>
 </ul>
+<h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><ul>
+<li>多个组件构成一张视图页面</li>
+<li>组件包含&lt;开始标签&gt;&lt;/结束标签&gt;</li>
+<li>每个组件都包含公用属性</li>
+</ul>
+<p>scroll-view</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">scroll-y</span>=<span class="string">"true"</span> <span class="attr">style</span>=<span class="string">"height:300rpx;"</span></span></span><br><span class="line"><span class="tag">             <span class="attr">bindscrolltoupper</span>=<span class="string">"scrolltoupper"</span> <span class="attr">bindscrolltolower</span>=<span class="string">"scrolltower"</span></span></span><br><span class="line"><span class="tag">             <span class="attr">upper-threshold</span>=<span class="string">"0"</span> <span class="attr">lower-threshold</span>=<span class="string">"0"</span> <span class="attr">scroll-top</span>=<span class="string">"250"</span></span></span><br><span class="line"><span class="tag">             <span class="attr">enable-back-to-top</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scroll-x</td>
+<td>boolean</td>
+<td>false</td>
+<td>否</td>
+<td>允许横向滚动</td>
+</tr>
+<tr>
+<td>scroll-y</td>
+<td>boolean</td>
+<td>false</td>
+<td>否</td>
+<td>允许纵向滚动</td>
+</tr>
+<tr>
+<td>upper-threshold</td>
+<td>number/string</td>
+<td>50</td>
+<td>否</td>
+<td>距顶部/左边多远时，触发 scrolltoupper 事件</td>
+</tr>
+<tr>
+<td>lower-threshold</td>
+<td>number/string</td>
+<td>50</td>
+<td>否</td>
+<td>距底部/右边多远时，触发 scrolltolower 事件</td>
+</tr>
+<tr>
+<td>scroll-top</td>
+<td>number/string</td>
+<td></td>
+<td>否</td>
+<td>设置竖向滚动条位置</td>
+</tr>
+<tr>
+<td>scroll-left</td>
+<td>number/string</td>
+<td></td>
+<td>否</td>
+<td>设置横向滚动条位置</td>
+</tr>
+<tr>
+<td>scroll-into-view</td>
+<td>string</td>
+<td></td>
+<td>否</td>
+<td>值应为某子元素id（id不能以数字开头）。设置哪个方向可滚动，则在哪个方向滚动到该元素</td>
+</tr>
+<tr>
+<td>scroll-with-animation</td>
+<td>boolean</td>
+<td>false</td>
+<td>否</td>
+<td>在设置滚动条位置时使用动画过渡</td>
+</tr>
+<tr>
+<td>enable-back-to-top</td>
+<td>boolean</td>
+<td>false</td>
+<td>否</td>
+<td>iOS点击顶部状态栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向</td>
+</tr>
+<tr>
+<td>enable-flex</td>
+<td>boolean</td>
+<td>false</td>
+<td>否</td>
+<td>启用 flexbox 布局。开启后，当前节点声明了 <code>display: flex</code> 就会成为 flex container，并作用于其孩子节点。</td>
+</tr>
+<tr>
+<td>scroll-anchoring</td>
+<td>boolean</td>
+<td>false</td>
+<td>否</td>
+<td>开启 scroll anchoring 特性，即控制滚动位置不随内容变化而抖动，仅在 iOS 下生效，安卓下可参考 CSS <code>overflow-anchor</code> 属性。</td>
+</tr>
+<tr>
+<td>refresher-enabled</td>
+<td>boolean</td>
+<td>false</td>
+<td>否</td>
+<td>开启自定义下拉刷新</td>
+</tr>
+<tr>
+<td>refresher-threshold</td>
+<td>number</td>
+<td>45</td>
+<td>否</td>
+<td>设置自定义下拉刷新阈值</td>
+</tr>
+<tr>
+<td>refresher-default-style</td>
+<td>string</td>
+<td>“black”</td>
+<td>否</td>
+<td>设置自定义下拉刷新默认样式，支持设置 `black</td>
+<td>white</td>
+<td>none`， none 表示不使用默认样式</td>
+</tr>
+<tr>
+<td>refresher-background</td>
+<td>string</td>
+<td>“#FFF”</td>
+<td>否</td>
+<td>设置自定义下拉刷新区域背景颜色</td>
+</tr>
+<tr>
+<td>refresher-triggered</td>
+<td>boolean</td>
+<td>false</td>
+<td>否</td>
+<td>设置当前下拉刷新状态，true 表示下拉刷新已经被触发，false 表示下拉刷新未被触发</td>
+</tr>
+<tr>
+<td>enhanced</td>
+<td>boolean</td>
+<td>false</td>
+<td>否</td>
+<td>启用 scroll-view 增强特性</td>
+</tr>
+<tr>
+<td>bounces</td>
+<td>boolean</td>
+<td>true</td>
+<td>否</td>
+<td>iOS 下 scroll-view 边界弹性控制 (同时开启 enhanced 属性后生效)</td>
+</tr>
+<tr>
+<td>show-scrollbar</td>
+<td>boolean</td>
+<td>true</td>
+<td>否</td>
+<td>滚动条显隐控制 (同时开启 enhanced 属性后生效)</td>
+</tr>
+<tr>
+<td>paging-enabled</td>
+<td>boolean</td>
+<td>false</td>
+<td>否</td>
+<td>分页滑动效果 (同时开启 enhanced 属性后生效)</td>
+</tr>
+<tr>
+<td>fast-deceleration</td>
+<td>boolean</td>
+<td>false</td>
+<td>否</td>
+<td>滑动减速速率控制 (同时开启 enhanced 属性后生效)</td>
+</tr>
+<tr>
+<td>binddragstart</td>
+<td>eventhandle</td>
+<td></td>
+<td>否</td>
+<td>滑动开始事件 (同时开启 enhanced 属性后生效) detail { scrollTop, scrollLeft }</td>
+</tr>
+<tr>
+<td>binddragging</td>
+<td>eventhandle</td>
+<td></td>
+<td>否</td>
+<td>滑动事件 (同时开启 enhanced 属性后生效) detail { scrollTop, scrollLeft }</td>
+</tr>
+<tr>
+<td>binddragend</td>
+<td>eventhandle</td>
+<td></td>
+<td>否</td>
+<td>滑动结束事件 (同时开启 enhanced 属性后生效) detail { scrollTop, scrollLeft, velocity }</td>
+</tr>
+<tr>
+<td>bindscrolltoupper</td>
+<td>eventhandle</td>
+<td></td>
+<td>否</td>
+<td>滚动到顶部/左边时触发</td>
+</tr>
+<tr>
+<td>bindscrolltolower</td>
+<td>eventhandle</td>
+<td></td>
+<td>否</td>
+<td>滚动到底部/右边时触发</td>
+</tr>
+<tr>
+<td>bindscroll</td>
+<td>eventhandle</td>
+<td></td>
+<td>否</td>
+<td>滚动时触发，event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY}</td>
+</tr>
+<tr>
+<td>bindrefresherpulling</td>
+<td>eventhandle</td>
+<td></td>
+<td>否</td>
+<td>自定义下拉刷新控件被下拉</td>
+</tr>
+<tr>
+<td>bindrefresherrefresh</td>
+<td>eventhandle</td>
+<td></td>
+<td>否</td>
+<td>自定义下拉刷新被触发</td>
+</tr>
+<tr>
+<td>bindrefresherrestore</td>
+<td>eventhandle</td>
+<td></td>
+<td>否</td>
+<td>自定义下拉刷新被复位</td>
+</tr>
+<tr>
+<td>bindrefresherabort</td>
+<td>eventhandle</td>
+<td></td>
+<td>否</td>
+<td>自定义下拉刷新被中止</td>
+</tr>
+</tbody>
+</table>
 
   
 
@@ -447,7 +692,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序必备技术点"><span class="toc-number">1.</span> <span class="toc-text">小程序必备技术点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序注册流程"><span class="toc-number">2.</span> <span class="toc-text">小程序注册流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-Word第一个小程序demo"><span class="toc-number">3.</span> <span class="toc-text">Hello Word第一个小程序demo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#运行微信官方demo"><span class="toc-number">3.1.</span> <span class="toc-text">运行微信官方demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#debug"><span class="toc-number">3.2.</span> <span class="toc-text">debug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据绑定"><span class="toc-number">3.3.</span> <span class="toc-text">数据绑定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wx-if-vs-hidden"><span class="toc-number">3.4.</span> <span class="toc-text">wx:if vs hidden</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模板的概念"><span class="toc-number">3.5.</span> <span class="toc-text">模板的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WXS模块"><span class="toc-number">3.6.</span> <span class="toc-text">WXS模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序的flex布局"><span class="toc-number">3.7.</span> <span class="toc-text">小程序的flex布局</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序必备技术点"><span class="toc-number">1.</span> <span class="toc-text">小程序必备技术点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序注册流程"><span class="toc-number">2.</span> <span class="toc-text">小程序注册流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-Word第一个小程序demo"><span class="toc-number">3.</span> <span class="toc-text">Hello Word第一个小程序demo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#运行微信官方demo"><span class="toc-number">3.1.</span> <span class="toc-text">运行微信官方demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#debug"><span class="toc-number">3.2.</span> <span class="toc-text">debug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据绑定"><span class="toc-number">3.3.</span> <span class="toc-text">数据绑定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wx-if-vs-hidden"><span class="toc-number">3.4.</span> <span class="toc-text">wx:if vs hidden</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模板的概念"><span class="toc-number">3.5.</span> <span class="toc-text">模板的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WXS模块"><span class="toc-number">3.6.</span> <span class="toc-text">WXS模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序的flex布局"><span class="toc-number">3.7.</span> <span class="toc-text">小程序的flex布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件"><span class="toc-number">3.8.</span> <span class="toc-text">组件</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
