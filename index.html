@@ -185,8 +185,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-      <div id="busuanzi_container_page_pv" style="font-size:16px;color:rgb(153,153,153);line-height:1.8em;">总阅读量<span id="busuanzi_value_page_pv"></span>次</div>
-    <p>创建于2020年10月15日</p>
+        <p>创建于2020年10月15日</p>
 <h2 id="小程序必备技术点"><a href="#小程序必备技术点" class="headerlink" title="小程序必备技术点"></a>小程序必备技术点</h2><p>HTML、CSS、JavaScript</p>
 <p>并不是所有app都适应小程序</p>
 <ul>
@@ -194,73 +193,10 @@
 <li>创业公司优先推出小程序，开发成本低</li>
 <li>当作简单的工具使用，需要在app上频繁的crud不适用</li>
 </ul>
-<h2 id="小程序注册流程"><a href="#小程序注册流程" class="headerlink" title="小程序注册流程"></a>小程序注册流程</h2><ul>
-<li>需要有公众号</li>
-<li>需要一个邮箱</li>
-</ul>
-<p>完善小程序信息</p>
-<ul>
-<li>小程序名称、头像、介绍、类型</li>
-<li>绑定开发者，管理员默认，团队成员需要绑定</li>
-<li>获取app ID?</li>
-</ul>
-<h2 id="Hello-Word第一个小程序demo"><a href="#Hello-Word第一个小程序demo" class="headerlink" title="Hello Word第一个小程序demo"></a>Hello Word第一个小程序demo</h2><ul>
-<li>开发工具下载</li>
-<li>开发工具安装</li>
-<li>默认项目编译并且运行</li>
-</ul>
-<p>调制器，相当于Google浏览器中的F12</p>
-<p>wxss就是css，微信为了突出他的官方名字，改为了wxss</p>
-<p><strong>index.wxml页面，index,js页面里的js, index,wxss页面里的css</strong></p>
-<p>三个文件构成一个index的组件(页面模块)，</p>
-<p>motto，就是初试化的，</p>
-<h3 id="运行微信官方demo"><a href="#运行微信官方demo" class="headerlink" title="运行微信官方demo"></a>运行微信官方demo</h3><ul>
-<li>下载demo源码</li>
-</ul>
-<ul>
-<li><p>可在pc端或微信端打开</p>
-<p>参考一些组件的写法是如何去实现的，并且微信API是如何去调用的</p>
-<figure class="highlight plain"><figcaption><span>class</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">JSON 是一种数据格式，并不是编程语言，在小程序中，JSON扮演的静态配置的角色。</span><br><span class="line"></span><br><span class="line">我们简单说一下这个配置各个项的含义:</span><br><span class="line"></span><br><span class="line">1. **`pages`字段** —— 用于描述当前小程序所有页面路径，这是为了让微信客户端知道当前你的小程序页面定义在哪个目录。</span><br><span class="line">2. **`window`字段** —— 定义小程序所有页面的顶部背景颜色，文字颜色定义等。</span><br><span class="line"></span><br><span class="line">### 工具配置 project.config.json</span><br><span class="line"></span><br><span class="line">通常大家在使用一个工具的时候，都会针对各自喜好做一些个性化配置，例如界面颜色、编译配置等等，当你换了另外一台电脑重新安装工具的时候，你还要重新配置。</span><br><span class="line"></span><br><span class="line">考虑到这点，小程序开发者工具在每个项目的根目录都会生成一个 `project.config.json`，你在工具上做的任何配置都会写入到这个文件,当你重新安装工具或者换电脑工作时，你只要载入同一个项目的代码包，开发者工具就自动会帮你恢复到当时你开发项目时的个性化配置，其中会包括编辑器的颜色、代码上传时自动压缩等等一系列选项。</span><br><span class="line"></span><br><span class="line">其他配置项细节可以参考文档 [开发者工具的配置](https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html) 。</span><br><span class="line"></span><br><span class="line">onlaunch 打开程序就会执行的一个函数。</span><br><span class="line"></span><br><span class="line">页面都要加载到page里面，page描述路径</span><br><span class="line"></span><br><span class="line">```json</span><br><span class="line">&quot;pages&quot;:[</span><br><span class="line">    &quot;pages/index/index&quot;,</span><br><span class="line">	pages-&gt;index文件夹-&gt;index文件</span><br><span class="line">  ],</span><br></pre></td></tr></table></figure>
-<p>wxml是我们的页面</p>
-<p>appjson是对当前小程序的全局配置，包括了小程序的所有页面路径、页面表现、网络超时实践、底部tab等。Quick Start项目由里边的app.json配置内容如下</p>
-<p>如果小程序是一个多 tab 应用（客户端窗口的底部或顶部有 tab 栏可以切换页面），可以通过 <strong>tabBar</strong> 配置项指定 tab 栏的表现，以及 tab 切换时显示的对应页面。</p>
-<h3 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h3><p>可以在开发者工具中开启 <code>debug</code> 模式，在开发者工具的控制台面板，调试信息以 <code>info</code> 的形式给出，其信息有 Page 的注册，页面路由，数据更新，事件触发等。可以帮助开发者快速定位一些常见的问题。</p>
-<h3 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h3></li>
-</ul>
-<p>  引用样式文件：</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">'txt-css'</span>&gt;</span>&#123;&#123;motto&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>  其中</p>
-  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.txt-css</span>&#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">230</span>rpx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>关于Onshow的触发，如果从广告进入小程序，就会触发</p>
-<p>redirectTo  不会有返回的按钮， navigateTo有返回的按钮，navigate用的多了，会影响性能和体验</p>
-<p>exports是module.expports的一个引用，因此在模块里面随意更改exports的指向会造成未知的错误，所以更推荐开发者采用module.exports来暴露模块接口</p>
-<p>小程序目前不支持直接</p>
-<p>一个item什么意思</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span> &#123;&#123;a + b&#125;&#125; + &#123;&#123;c&#125;&#125; + d <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: <span class="number">1</span>,</span><br><span class="line">    b: <span class="number">2</span>,</span><br><span class="line">    c: <span class="number">3</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>view中的内容为 <code>3 + 3 + d</code>。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>&#123;&#123;"hello" + name&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">Page(&#123;</span><br><span class="line">  data:&#123;</span><br><span class="line">    name: 'MINA'</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">checkbox</span> <span class="attr">checked</span>=<span class="string">"&#123;&#123;false&#125;&#125;"</span>&gt;</span> <span class="tag">&lt;/<span class="name">checkbox</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong><em>特别注意：不要直接写 <code>checked=&quot;false&quot;</code>，其计算结果是一个字符串，转成 boolean 类型后代表真值。</em></strong></p>
-<p>## </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;array&#125;&#125;"</span>&gt;</span></span><br><span class="line">    &#123;&#123;index&#125;&#125;: &#123;&#123;item.message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">page(&#123;</span><br><span class="line">    data: &#123;</span><br><span class="line">        array: [&#123;</span><br><span class="line">            message: <span class="string">'foo'</span>,</span><br><span class="line">        &#125;,&#123;<span class="attr">message</span>: <span class="string">'bar'</span>&#125;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>使用 wx:for-item 可以指定数组当前元素的变量名，</p>
-<p>使用 wx:for-index可以指定数组当前下标的变量名：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;array&#125;&#125;"</span> <span class="attr">wx:for-index</span>=<span class="string">"idx"</span> <span class="attr">wx:for-item</span>=<span class="string">"itemName"</span>&gt;</span></span><br><span class="line">    &#123;&#123;idx&#125;&#125;: &#123;&#123;itemName.message&#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>wx:for 也可以嵌套，下边是一个九九乘法表</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;[1,2,3,4,5,6,7,8,9]&#125;&#125;"</span> <span class="attr">wx:for-item</span>=<span class="string">"i"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;[1,2,3,4,5,6,7,8,9]&#125;&#125;"</span> <span class="attr">wx:for-item</span>=<span class="string">"j"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:if</span>=<span class="string">"&#123;&#123;i&lt;=j&#125;&#125;"</span>&gt;</span></span><br><span class="line">            &#123;&#123;i&#125;&#125;*&#123;&#123;j&#125;&#125;=&#123;&#123;i*j&#125;&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>block wx:for</p>
-<p>类似block wx:if，也可以将wx:for用在<block>标签上，以渲染一个包含多节点的结构块，例如：</block></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">block</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;[1,2,3]&#125;&#125;"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">view</span>&gt;</span> &#123;&#123;index&#125;&#125;: <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span>&gt;</span> &#123;&#123;item&#125;&#125; <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>使用block循环不会换行，view里面的for循环会换行</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:if</span>=<span class="string">"&#123;&#123;age&lt;18&#125;&#125;"</span>&gt;</span>未成年<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:elif</span>=<span class="string">"&#123;&#123;age&gt;=18&amp;&amp;age&lt;=30&#125;&#125;"</span>&gt;</span>已成年<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:else</span>&gt;</span>你已经老了~~<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><img src="C:\Users\wallacezh\AppData\Roaming\Typora\typora-user-images\image-20201018141002293.png" alt="image-20201018141002293"></p>
-<p>虽然没有在页面显示，但wxml里面能看到隐藏元素（建议放大了看）</p>
-<p>双引号里面的空格不能乱用，引号多一个空格就不是原来的意思了，另外空字符串和false貌似是一个意思</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">hidden</span>=<span class="string">"&#123;&#123;false&#125;&#125;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span>&gt;</span> 这是一个hidden元素<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span>&gt;</span>hidden判断<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-  
+        
+          <a class="article-more-a" href="/2020/10/15/Java短视频小程序开发全栈式实战项目/#more">more >></a>
+        
+      
 
       
     </div>
