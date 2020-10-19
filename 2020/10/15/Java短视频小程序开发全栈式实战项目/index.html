@@ -21,7 +21,7 @@
 <meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201018153750457.png">
 <meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201018154620702.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11383902-605d0dce3a0b5eca.png?imageMogr2/auto-orient/strip|imageView2/2/w/120">
-<meta property="og:updated_time" content="2020-10-19T07:00:23.500Z">
+<meta property="og:updated_time" content="2020-10-19T10:50:30.957Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java短视频小程序开发全栈式实战项目">
 <meta name="twitter:description" content="创建于2020年10月15日 小程序必备技术点HTML、CSS、JavaScript 并不是所有app都适应小程序  基于腾讯庞大的社交群体，可以为原生app导流 创业公司优先推出小程序，开发成本低 当作简单的工具使用，需要在app上频繁的crud不适用">
@@ -75,7 +75,7 @@
 	        
 				<li><a href="/tags/考研/">考研</a></li>
 	        
-				<li><a href="/tags/HTML">实战</a></li>
+				<li><a href="/tags/HTML/ tags/CSS/ tags/JavaScript/ tags/spring/ tags/spring boot/ tags/spring MVC/">实战</a></li>
 	        
 			</ul>
 		<nav class="header-smart-menu">
@@ -164,7 +164,7 @@
 		        
 					<li style="width: 20%"><a href="/tags/考研/">考研</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/HTML">实战</a></li>
+					<li style="width: 20%"><a href="/tags/HTML/ tags/CSS/ tags/JavaScript/ tags/spring/ tags/spring boot/ tags/spring MVC/">实战</a></li>
 		        
 				</ul>
 			</nav>
@@ -577,6 +577,24 @@
 <p>在页面的js文件中定义了 onShareAppMessage 函数时，页面可以表示该页面可以转发。可以在函数中设置页面转发的信息。</p>
 <p>页面中有可以触发转发时间的地方有两个：<br> 　一个是右上角菜单中的转发按钮<br> 　另一个是页面中具有属性open-type且其值为share的button。（注：必须是button组件，其他组件中设置 open-type=”share” 无效）</p>
 <p><code>current=&quot;0&quot;</code>为当前显示在哪个滑块，为啥为<code>0</code>，因为默认值为<code>0</code>，可知从零开始算起</p>
+<p>wx:key 的值以两种形式提供</p>
+<ol>
+<li>字符串，代表在 for 循环的 array 中 item 的某个 property，该 property 的值需要是列表中唯一的字符串或数字，且不能动态改变。</li>
+<li>保留关键字 *this 代表在 for 循环中的 item 本身，这种表示需要 item 本身是一个唯一的字符串或者数字</li>
+</ol>
+<p>swiper中的事件在，左右滑动的时候，滑动结束会du出发这个事件。</p>
+<ol>
+<li>bindfocus: 指当我们的输入框获得bai焦点时触发，也就是鼠标或du者手指点击到输入框时。 bindblur: 指输入框失去焦点是触发，也就是当我们敲击回车或手机上的完成又或者是点击屏幕上的空白处时触发。</li>
+<li>bindchange: 这个事件官方文档中没有写，它的效果和bindblur一样，至于看名字我们可能觉得bindchange在输入框中的内容不改变时不会触发，但是亲测即使内容不改变，bindchange事件也一样会触发。</li>
+<li>bindinput: 没输入一个字符都会进行一次检索，通常用于实时检索。但是这种方法对数据库的要求较高。</li>
+<li>在bindblur或bindchange事件中我们通过event.detail.value获得swiper中的事件，左右滑动的时候，滑动结束会出发这个事件。</li>
+</ol>
+<p>indicator-dots=” 双花括号里面的变量会在某个位置设置调整值</p>
+<p>span.highlight<br>{<br>background-color:yellow<br>}</p>
+<p><span class="highlight">      样式是高亮</span></p>
+<p>这里class=    大概意思是 样式是“什么”</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">&lt;style type="text/css"&gt;p.leftmargin &#123;margin-left: 2cm&#125;&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">&lt;p&gt;这个段落没有指定外边距&lt;/p&gt;</span><br><span class="line">&lt;p class="leftmargin"&gt;这个段落带有指定的左外边距。&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">&lt;style type="text/css"&gt;</span><br><span class="line"><span class="selector-tag">u1</span><span class="selector-class">.disc</span> &#123;<span class="attribute">list-style-tyle</span>: disc&#125;</span><br><span class="line"><span class="selector-tag">u1</span><span class="selector-class">.circle</span> &#123;<span class="attribute">list-style-tyle</span>: circle&#125;</span><br><span class="line"><span class="selector-tag">u1</span><span class="selector-class">.square</span>&#123;<span class="attribute">list-style-tyle</span>: square&#125;</span><br><span class="line"><span class="selector-tag">u1</span><span class="selector-class">.none</span> &#123;<span class="attribute">list-style-tyle</span>:&#125;</span><br></pre></td></tr></table></figure>
 
   
 
