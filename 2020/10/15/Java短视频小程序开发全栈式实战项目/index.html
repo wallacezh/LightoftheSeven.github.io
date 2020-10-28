@@ -21,7 +21,12 @@
 <meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201018153750457.png">
 <meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201018154620702.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11383902-605d0dce3a0b5eca.png?imageMogr2/auto-orient/strip|imageView2/2/w/120">
-<meta property="og:updated_time" content="2020-10-19T10:50:30.957Z">
+<meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201022184328566.png">
+<meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201027182542131.png">
+<meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201027193001607.png">
+<meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201027193117890.png">
+<meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201028102234309.png">
+<meta property="og:updated_time" content="2020-10-28T02:40:19.514Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java短视频小程序开发全栈式实战项目">
 <meta name="twitter:description" content="创建于2020年10月15日 小程序必备技术点HTML、CSS、JavaScript 并不是所有app都适应小程序  基于腾讯庞大的社交群体，可以为原生app导流 创业公司优先推出小程序，开发成本低 当作简单的工具使用，需要在app上频繁的crud不适用">
@@ -574,7 +579,7 @@
 <p>next-margin 后边距，露出后一项的一小部分。</p>
 <p>display-multiple-items 同时显示的滑块数量</p>
 <p>easing-function 切换类型，duration 滑动动画时长</p>
-<p>在页面的js文件中定义了 onShareAppMessage 函数时，页面可以表示该页面可以转发。可以在函数中设置页面转发的信息。</p>
+<p><strong>在页面的js文件中定义了 onShareAppMessage 函数时，页面可以表示该页面可以转发。可以在函数中设置页面转发的信息。</strong></p>
 <p>页面中有可以触发转发时间的地方有两个：<br> 　一个是右上角菜单中的转发按钮<br> 　另一个是页面中具有属性open-type且其值为share的button。（注：必须是button组件，其他组件中设置 open-type=”share” 无效）</p>
 <p><code>current=&quot;0&quot;</code>为当前显示在哪个滑块，为啥为<code>0</code>，因为默认值为<code>0</code>，可知从零开始算起</p>
 <p>wx:key 的值以两种形式提供</p>
@@ -595,6 +600,125 @@
 <p>这里class=    大概意思是 样式是“什么”</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">&lt;style type="text/css"&gt;p.leftmargin &#123;margin-left: 2cm&#125;&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">&lt;p&gt;这个段落没有指定外边距&lt;/p&gt;</span><br><span class="line">&lt;p class="leftmargin"&gt;这个段落带有指定的左外边距。&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">&lt;style type="text/css"&gt;</span><br><span class="line"><span class="selector-tag">u1</span><span class="selector-class">.disc</span> &#123;<span class="attribute">list-style-tyle</span>: disc&#125;</span><br><span class="line"><span class="selector-tag">u1</span><span class="selector-class">.circle</span> &#123;<span class="attribute">list-style-tyle</span>: circle&#125;</span><br><span class="line"><span class="selector-tag">u1</span><span class="selector-class">.square</span>&#123;<span class="attribute">list-style-tyle</span>: square&#125;</span><br><span class="line"><span class="selector-tag">u1</span><span class="selector-class">.none</span> &#123;<span class="attribute">list-style-tyle</span>:&#125;</span><br></pre></td></tr></table></figure>
+<p><meta charset="utf-8"> 定义网页编码格式为 utf-8。</p>
+<p><strong><body></body></strong> 元素包含了可见的页面内容</p>
+<p><strong><h1></h1></strong> 元素定义一个大标题</p>
+<p></p><p> 元素定义一个段落</p>
+<p>在浏览器的页面上使用键盘上的 F12 按键开启调试模式，就可以看到组成标签。</p>
+<p>每30秒钟刷新当前页面:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>span表示对一部分文本着色，div对一个区域着色 <a href="https://www.runoob.com/html/html-blocks.html" target="_blank" rel="noopener">HTML <div> 和<span></span></div></a></p>
+<p>float:left 如果不用float，那此div或view就会占一行单元</p>
+<p>&lt;br  在块内换行</p>
+<p><nav> nav标签定义导航链接的部分。</nav></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">view</span>&gt;</span><br><span class="line">	&lt;view&gt;这是一个view文本内容&lt;/view&gt;</span><br><span class="line">	&lt;text selectable='&#123;&#123;true&#125;&#125;'&gt;这是一段text文本内容&lt;/text&gt;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mycontent: <span class="string">'&lt;img class="course-banner" src="//img1.mukewang.com/szimg/5f3c866608d7a4e706000338-360-202.jpg"&gt;'</span>, </span><br><span class="line">mycontent2: [</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">"img"</span>,</span><br><span class="line">        attrs: &#123;</span><br><span class="line">          class: "course-banner",</span><br><span class="line">          src:</span><br><span class="line">          <span class="string">"//img1.mukewang.com/szimg/5f3c866608d7a4e706000338-360-202.jpg"</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>mycontext解析的是json字符串</p>
+<p>mycontext2解析的是[],json对象。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.course-banner</span>&#123;</span><br><span class="line"></span><br><span class="line"> <span class="attribute">width</span>: <span class="number">300</span>rpx;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">addPercent: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//这函数相当于给加20</span></span><br><span class="line">    <span class="keyword">var</span> newPercent = <span class="keyword">this</span>.data.mypercent + <span class="number">20</span>;</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      mypercent: newPercent</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;progress percent="&#123;&#123;mypercent&#125;&#125;" show-info="true" stroke-width="10"  backgroundColor="blue" active="&#123;&#123;true&#125;&#125;" active-mode="forwards"&gt;&lt;/progress&gt;</span><br><span class="line">&lt;view bindtap="addPercent"&gt;addPercent&lt;/view&gt;</span><br></pre></td></tr></table></figure>
+<p>label可以对文字就行选中。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">checkbox-group</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;array&#125;&#125;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">checkbox</span> <span class="attr">value</span>=<span class="string">"&#123;&#123;item.name&#125;&#125;"</span> <span class="attr">checked</span>=<span class="string">'&#123;&#123;item.checked&#125;&#125;'</span> <span class="attr">color</span>=<span class="string">'&#123;&#123;item.color&#125;&#125;'</span> <span class="attr">disabled</span>=<span class="string">"&#123;&#123;item.disabled&#125;&#125;"</span>/&gt;</span>&#123;&#123;item.value&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">checkbox-group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>其中view改成了label，</p>
+<p>cursor-spacing,光标与键盘的距离</p>
+<p>focus 自动聚焦到该行</p>
+<p>点击确定的时候，会把值作为value传过来。</p>
+<p>遇到个bug,一直过不去，  arrayObjMulti is not defined,原来是我data里面创建的是数组</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arrayObjMulti = this.data.arrayObjMulti;</span><br><span class="line"></span><br><span class="line">picker mode="multiSelector" range="&#123;&#123;arrayObjMulti&#125;&#125;" range-key="id" bindchange="ChangeMulti" bindcolumnchange="columnchange"&gt;</span><br></pre></td></tr></table></figure>
+<p>多项选择看项目4的picker文件</p>
+<p>&lt;view class=”container,会自动调整居中</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;text-align:center&#125; //文本中心对齐</span><br></pre></td></tr></table></figure>
+<p>line-height 属性设置行间的距离（行高）。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">radio-group</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">radio</span> <span class="attr">checked</span>=<span class="string">"&#123;&#123;true&#125;&#125;"</span>&gt;</span>中国<span class="tag">&lt;/<span class="name">radio</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">radio</span> <span class="attr">checked</span>=<span class="string">"&#123;&#123;true&#125;&#125;"</span>&gt;</span>美国<span class="tag">&lt;/<span class="name">radio</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">radio</span> <span class="attr">checked</span>=<span class="string">"&#123;true&#125;"</span>&gt;</span>俄国<span class="tag">&lt;/<span class="name">radio</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 他是一行一行渲染，但是只能渲染一个，所以最终选中俄国 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">radio-group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><label for="1001">测试点击</label> 一样可以选中前面的id为1001的选项</p>
+<h3 id="小程序和后台API通信"><a href="#小程序和后台API通信" class="headerlink" title="小程序和后台API通信"></a>小程序和后台API通信</h3><ul>
+<li><p>小程序不能直接访问后台接口<br>因为他不是web应用，web应用发布之后可以直接打开本地地址，加端口就可以访问了，</p>
+<p>小程序是不可以的，它只可以访问一些在线的通过一些域名绑定过的后台程序</p>
+</li>
+<li><p>必须通过内网穿透来实现，把本地的端口和IP暴露到公网，并且映射到一个渔民，</p>
+</li>
+<li><p>工具：ngrok   ngrok.com/</p>
+<p><img src="C:\Users\wallacezh\AppData\Roaming\Typora\typora-user-images\image-20201022184328566.png" alt="image-20201022184328566"></p>
+</li>
+</ul>
+<p>http和https区别：http如果攻击者截取了web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，而https，是具有安全性的ssl加密传输协议，为浏览器和服务器之间的通信加密，确保数据传输的安全。http-&gt;SSl or TLS-&gt;TCP</p>
+<h2 id="spring"><a href="#spring" class="headerlink" title="spring"></a>spring</h2><ul>
+<li><p>spring是一个轻量级的开源框架</p>
+</li>
+<li><p>spring为了解决企业级应用开发的业务逻辑层和其他各层的耦合问题</p>
+</li>
+<li>spring是一个IOC和AOP的容器框架<ul>
+<li>IOC： 控制反转</li>
+<li>AOP：面向切面编程</li>
+<li><strong>容器： 包含并管理应用对象的生命周期</strong></li>
+</ul>
+</li>
+</ul>
+<p>使用spring的优点</p>
+<ol>
+<li>spring通过DI、AOP和消除样板式代码来间花企业级Java开发</li>
+<li>spring框架之外还存在一个构建在核心框架智商的庞大生态圈，它将spring扩展到不同的领域，如web服务，REST、移动开发以及noSQL</li>
+<li>低侵入式设计、代码的污染极低</li>
+<li>独立于各种应用服务器，基于spring框架的应用，可以真正实现write Once,Run Anywhere的承诺</li>
+<li>Spring的IOC容器降低了业务对象替换的复杂性，提高了组件之间的解耦</li>
+<li>Spring的AOP支持语序将一些通用任务如安全事务、日志等进行集中式处理，从而提供了更好的复用</li>
+<li>spring的ORM和DAO提供了与第三方持久层框架的良好整合，并简化了底层的数据库访问</li>
+<li>spring的高度开放性，并不强制应用完全依赖于spring，开发者可自由选用spring框架的部分或全部</li>
+<li>任何一个语言或者任何一个框架要立于不败之地，那么很重要的就是它的生态</li>
+</ol>
+<p>设计者提供一个接口出来，来接受不同的外设，并且让外设变成可拔插</p>
+<p>依赖倒置原则：具体实现依赖、抽象，IOC的前身</p>
+<p>IOC代码实现</p>
+<ol>
+<li>最low的实现方式，导入jar包—配置xml,入门</li>
+<li>一般实现方式，maven+注解+xml</li>
+<li>最屌实现方式： springboot+javaconfig</li>
+</ol>
+<p><img src="C:\Users\wallacezh\AppData\Roaming\Typora\typora-user-images\image-20201027182542131.png" alt="image-20201027182542131"></p>
+<p>IDEA的构造器的快捷键 Alt+insert,</p>
+<p>通过xml的IOC必须加入get和set方法</p>
+<p><bean>中的name属性是class属性的一个别名，class属性指类的全名</bean></p>
+<p>ref指&lt;bean name=”springDao”…&gt;，</p>
+<p><img src="C:\Users\wallacezh\AppData\Roaming\Typora\typora-user-images\image-20201027193001607.png" alt="image-20201027193001607"></p>
+<p>只需要改这一个地方就可以了，ref=id.</p>
+<p><img src="C:\Users\wallacezh\AppData\Roaming\Typora\typora-user-images\image-20201027193117890.png" alt="image-20201027193117890"></p>
+<p>一个意思。</p>
+<p>IOC和DI是不同的角度来描述的同一件事，IOC从容器的角度，而DI从容器的角度来描述..</p>
+<p>IOC是依赖倒置原则的设计思想,而DI是具体的实现方式.</p>
+<p>所有类分开,通过IOC结合在一起起作用,所以IOC又称为粘合剂</p>
+<p>而对象A获得依赖对象B的过程,由主动行为变为了被动行为,控制权颠倒过来了,这就是控制反转这个名称的由来</p>
+<p>对象都是到IOC里去拿</p>
+<p>IOC优点:</p>
+<ol>
+<li>解耦</li>
+<li>集中管理</li>
+<li>功能可复用</li>
+<li>使得程序的整个体系结构可维护性\灵活性\扩展性变高</li>
+</ol>
+<p>[]: <a href="https://www.cnblogs.com/zhy0720/p/10452191.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhy0720/p/10452191.html</a>    “Spring XML配置”</p>
+<p>ref属性：引用其他bean的id值。</p>
+<p>name属性：bean的名字，没有采用ID的约束；name允许出现特殊字符；如果没有id的话，name也可以当作id使用。</p>
+<p>class属性：被管理对象的完整类名。</p>
+<p>id属性：Bean的名字，使用了约束中的唯一约束，里面不能出现特殊字符；必须以字母开始，可以使用字母、数字、连字符、下划线、句号、冒号。</p>
+<h3 id="maven的介绍与使用"><a href="#maven的介绍与使用" class="headerlink" title="maven的介绍与使用"></a>maven的介绍与使用</h3><p>Maven是Apache下的项目管理工具,由纯Java语言开发,可以帮助我们更方便的管理和构建Java项目</p>
+<p>Maven的优点</p>
+<ol>
+<li>jar包管理    <ol>
+<li>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包,避免自己下载到错误的jar包</li>
+<li>本地仓库统一管理jar包,使jar包与项目分离,减轻项目体积</li>
+</ol>
+</li>
+<li>Maven是跨平台的可以在window\Linux上使用</li>
+<li>清晰的项目结构</li>
+</ol>
+<p><img src="C:\Users\wallacezh\AppData\Roaming\Typora\typora-user-images\image-20201028102234309.png" alt="image-20201028102234309"></p>
+<ol start="4">
+<li>多工程开发,将模块拆分成若干工程,利于团队协作开发</li>
+<li>一键构建项目:使用命令可以对项目进行一键构建</li>
+</ol>
+<p>Maven通过坐标的方式获取jar包,坐标组成为:公司/组织+项目名+版本 组成</p>
+<p>可以从互联网\本地等多种仓库源获取jar包</p>
 
   
 
@@ -763,7 +887,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序必备技术点"><span class="toc-number">1.</span> <span class="toc-text">小程序必备技术点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序注册流程"><span class="toc-number">2.</span> <span class="toc-text">小程序注册流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-Word第一个小程序demo"><span class="toc-number">3.</span> <span class="toc-text">Hello Word第一个小程序demo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#运行微信官方demo"><span class="toc-number">3.1.</span> <span class="toc-text">运行微信官方demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#debug"><span class="toc-number">3.2.</span> <span class="toc-text">debug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据绑定"><span class="toc-number">3.3.</span> <span class="toc-text">数据绑定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wx-if-vs-hidden"><span class="toc-number">3.4.</span> <span class="toc-text">wx:if vs hidden</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模板的概念"><span class="toc-number">3.5.</span> <span class="toc-text">模板的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WXS模块"><span class="toc-number">3.6.</span> <span class="toc-text">WXS模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序的flex布局"><span class="toc-number">3.7.</span> <span class="toc-text">小程序的flex布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件"><span class="toc-number">3.8.</span> <span class="toc-text">组件</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序必备技术点"><span class="toc-number">1.</span> <span class="toc-text">小程序必备技术点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序注册流程"><span class="toc-number">2.</span> <span class="toc-text">小程序注册流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-Word第一个小程序demo"><span class="toc-number">3.</span> <span class="toc-text">Hello Word第一个小程序demo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#运行微信官方demo"><span class="toc-number">3.1.</span> <span class="toc-text">运行微信官方demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#debug"><span class="toc-number">3.2.</span> <span class="toc-text">debug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据绑定"><span class="toc-number">3.3.</span> <span class="toc-text">数据绑定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wx-if-vs-hidden"><span class="toc-number">3.4.</span> <span class="toc-text">wx:if vs hidden</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模板的概念"><span class="toc-number">3.5.</span> <span class="toc-text">模板的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WXS模块"><span class="toc-number">3.6.</span> <span class="toc-text">WXS模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序的flex布局"><span class="toc-number">3.7.</span> <span class="toc-text">小程序的flex布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件"><span class="toc-number">3.8.</span> <span class="toc-text">组件</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序和后台API通信"><span class="toc-number">0.1.</span> <span class="toc-text">小程序和后台API通信</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spring"><span class="toc-number">1.</span> <span class="toc-text">spring</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#maven的介绍与使用"><span class="toc-number">1.1.</span> <span class="toc-text">maven的介绍与使用</span></a></li></ol></li>
                     </div>
                 </span>
             </div>
