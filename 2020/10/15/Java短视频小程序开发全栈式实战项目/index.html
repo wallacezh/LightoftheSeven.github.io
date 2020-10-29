@@ -26,7 +26,10 @@
 <meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201027193001607.png">
 <meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201027193117890.png">
 <meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201028102234309.png">
-<meta property="og:updated_time" content="2020-10-28T02:40:19.514Z">
+<meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201028184334949.png">
+<meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201028170826544.png">
+<meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201029181410474.png">
+<meta property="og:updated_time" content="2020-10-29T12:28:30.526Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java短视频小程序开发全栈式实战项目">
 <meta name="twitter:description" content="创建于2020年10月15日 小程序必备技术点HTML、CSS、JavaScript 并不是所有app都适应小程序  基于腾讯庞大的社交群体，可以为原生app导流 创业公司优先推出小程序，开发成本低 当作简单的工具使用，需要在app上频繁的crud不适用">
@@ -697,16 +700,17 @@
 <li>使得程序的整个体系结构可维护性\灵活性\扩展性变高</li>
 </ol>
 <p>[]: <a href="https://www.cnblogs.com/zhy0720/p/10452191.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhy0720/p/10452191.html</a>    “Spring XML配置”</p>
+<p>Bean的命名约定,是按照标准的Java字段名称来进行的,也就是说,bean名称开始需要以小写字母开头,后面采用驼峰式的方法,例如</p>
 <p>ref属性：引用其他bean的id值。</p>
 <p>name属性：bean的名字，没有采用ID的约束；name允许出现特殊字符；如果没有id的话，name也可以当作id使用。</p>
 <p>class属性：被管理对象的完整类名。</p>
-<p>id属性：Bean的名字，使用了约束中的唯一约束，里面不能出现特殊字符；必须以字母开始，可以使用字母、数字、连字符、下划线、句号、冒号。</p>
+<p>id属性：Bean的名字，使用了约束中的唯一约束，<strong>是字符串 ，用来识别唯一的bean定义.</strong>里面不能出现特殊字符；必须以字母开始，可以使用字母、数字、连字符、下划线、句号、冒号。</p>
 <h3 id="maven的介绍与使用"><a href="#maven的介绍与使用" class="headerlink" title="maven的介绍与使用"></a>maven的介绍与使用</h3><p>Maven是Apache下的项目管理工具,由纯Java语言开发,可以帮助我们更方便的管理和构建Java项目</p>
 <p>Maven的优点</p>
 <ol>
 <li>jar包管理    <ol>
 <li>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包,避免自己下载到错误的jar包</li>
-<li>本地仓库统一管理jar包,使jar包与项目分离,减轻项目体积</li>
+<li>本地仓库统一管理jar包,使<strong>jar包与项目分离,减轻项目体积</strong></li>
 </ol>
 </li>
 <li>Maven是跨平台的可以在window\Linux上使用</li>
@@ -719,6 +723,100 @@
 </ol>
 <p>Maven通过坐标的方式获取jar包,坐标组成为:公司/组织+项目名+版本 组成</p>
 <p>可以从互联网\本地等多种仓库源获取jar包</p>
+<p>context是spring所以jar包的入口,context会依赖所有jar包,</p>
+<p>报错 <strong>java: 不支持发行版本 5</strong></p>
+<p><img src="C:\Users\wallacezh\AppData\Roaming\Typora\typora-user-images\image-20201028184334949.png" alt="image-20201028184334949"></p>
+<p> 基于setter方法依赖注入,name属性对应的set方法的名字</p>
+<p>比如setId -&gt; name=”id”    setxx -&gt; name=”xx”;</p>
+<p>使用p命名空间简化基于setter属性注入XML配置</p>
+<p>p按Alt+Enter自动加上命名空间</p>
+<p>设置基本数据类型   或者p:wife-ref 引用外部bean</p>
+<p>如果有集合类型 就不支持,需要额外配置</p>
+<p>c命名空间,c Alt+Enter,同样不支持集合,不需要constructor</p>
+<p><img src="C:\Users\wallacezh\AppData\Roaming\Typora\typora-user-images\image-20201028170826544.png" alt="image-20201028170826544"></p>
+<p>Maven会把依赖全部下进来</p>
+<p>depends-on 依赖于某参数,先加载该参数</p>
+<p>国外的地址可能会受限,最好配一个国内的镜像阿里云,保证下载速度\超时</p>
+<p>但是国内的镜像不能保证百分之百镜像都有,因此再配一个maven的中央仓库repo1,第一个仓库再找不到还有第二个仓库repo2,三层保险</p>
+<p>提供给ApplicationContext构造函数的路径就是实际的资源字符串，使容器能从各种外部资源(如本地文件系统、Java类路径等)装载元数据配置。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"services.xml"</span>, <span class="string">"daos.xml"</span>);</span><br></pre></td></tr></table></figure>
+<p>xml后缀的都是资源文件</p>
+<h5 id="组合基于XML的元数据配置"><a href="#组合基于XML的元数据配置" class="headerlink" title="组合基于XML的元数据配置"></a>组合基于XML的元数据配置</h5><p>使用XML配置，可以让bean定义分布在多个XML文件上，这种方法直观优雅清晰明显。通常，<strong><em>每个单独的XML配置文件</em></strong>代表架构中的一个<strong>逻辑层或模块</strong>。</p>
+<p>ApplicationContext是能够创建bean定义以及处理相互依赖关系的高级工厂接口</p>
+<p>使用方法T getbean(String name,class <t> requiredType) 获取容器实例</t></p>
+<p>ApplicationContext可以读取bean定义并访问它们</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建和配置beans</span></span><br><span class="line">ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"services.xml"</span>,<span class="string">"daos.xml"</span>);</span><br><span class="line"><span class="comment">// retrieve configured instance</span></span><br><span class="line">PetStoreService service = context.getBean(<span class="string">"petStore"</span>, PetStoreService.class);</span><br><span class="line"><span class="comment">//使用配置实例</span></span><br><span class="line">List&lt;String&gt; userList = service.getusernameList();x</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>对应的章节名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td><a href="https://github.com/wzr1005/DocsHome-spring-docs/blob/master/pages/core/IoC-container.md#beans-factory-class" target="_blank" rel="noopener">实例化Bean</a></td>
+</tr>
+<tr>
+<td>Name</td>
+<td><a href="https://github.com/wzr1005/DocsHome-spring-docs/blob/master/pages/core/IoC-container.md#beans-beanname" target="_blank" rel="noopener">命名Bean</a></td>
+</tr>
+<tr>
+<td>Scope</td>
+<td><a href="https://github.com/wzr1005/DocsHome-spring-docs/blob/master/pages/core/IoC-container.md#beans-factory-scopes" target="_blank" rel="noopener">Bean 的作用域</a></td>
+</tr>
+<tr>
+<td>Constructor arguments</td>
+<td><a href="https://github.com/wzr1005/DocsHome-spring-docs/blob/master/pages/core/IoC-container.md#beans-factory-collaborators" target="_blank" rel="noopener">依赖注入</a></td>
+</tr>
+<tr>
+<td>Properties</td>
+<td><a href="https://github.com/wzr1005/DocsHome-spring-docs/blob/master/pages/core/IoC-container.md#beans-factory-collaborators" target="_blank" rel="noopener">依赖注入</a></td>
+</tr>
+<tr>
+<td>Autowiring mode</td>
+<td><a href="https://github.com/wzr1005/DocsHome-spring-docs/blob/master/pages/core/IoC-container.md#beans-factory-autowire" target="_blank" rel="noopener">自动装配</a></td>
+</tr>
+<tr>
+<td>Lazy initialization mode</td>
+<td><a href="https://github.com/wzr1005/DocsHome-spring-docs/blob/master/pages/core/IoC-container.md#beans-factory-lazy-init" target="_blank" rel="noopener">懒加载Bean</a></td>
+</tr>
+<tr>
+<td>Initialization method</td>
+<td><a href="https://github.com/wzr1005/DocsHome-spring-docs/blob/master/pages/core/IoC-container.md#beans-factory-lifecycle-initializingbean" target="_blank" rel="noopener">初始化方法回调</a></td>
+</tr>
+<tr>
+<td>Destruction method</td>
+<td><a href="https://github.com/wzr1005/DocsHome-spring-docs/blob/master/pages/core/IoC-container.md#beans-factory-lifecycle-disposablebean" target="_blank" rel="noopener">销毁方法回调</a></td>
+</tr>
+</tbody>
+</table>
+<p>请注意，由于bean <code>id</code>的唯一性，他仍然由容器执行，不再由XML解析器执行。</p>
+<p>对bean定义，除了使用id属性指定唯一的名称外，还可以提供多个别名，这需要通过name属性指定。所有这些名称都会指向同一个bean，在某些情况下提供别名非常有用，例如为了让应用每一个组件都能更容易的对公共组件进行引用。</p>
+<p>然而，在定义bean时就指定所有的别名不是很恰当的，<strong>有时期望能够在当前位置为那些在别处定义的bean引入别名，在Xml配置文件中，可以通过<alias>元素来定义bean别名</alias></strong>，例如：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">alias</span> <span class="attr">name</span>=<span class="string">"fronmName"</span> <span class="attr">alias</span>=<span class="string">"toName"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p>上面实例中，在同一个容器中名为fromName的bean定义，在增加别名定义后，也可以使用toName来引用。</p>
+<p>如果你想配置<strong>静态内部类</strong>，那么必须使用<strong>内部类的二进制名称</strong>。</p>
+<p>例如，在<code>com.example</code>有个<code>SomeThing</code>类，这个类里面有个静态内部类<code>OtherThing</code>，这种情况下bean定义的class属性应该写作 <strong><code>com.example.SomeThing$OtherThing</code>.</strong></p>
+<p>用$字符来分隔外部类和内部类的名称</p>
+<p>Spring Ioc容器几乎可以管理任何类</p>
+<p>下面的bean定义展示了如何通过工厂方法来创建bean实例，注意，此定义并未指定对象的返回类型，只是指定了该类包含的工厂方法，该例中，createInstance必须是一个静态static的方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=<span class="string">"clientService"</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span></span>=<span class="string">"examples.ClientService"</span></span><br><span class="line">        factory-method=<span class="string">"createInstance"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<p>以下示例显示了一个可以使用前面的bean定义的类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClientService</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> ClientService = <span class="keyword">new</span> ClientService();</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Clientservice</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ClientService <span class="title">createInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> clientService;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>@ConstructorProperties注解来显式声明构造函数的名称。例如下面代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> examples;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExampleBean</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Fields omitted</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@ConstructorProperties</span>(&#123;<span class="string">"years"</span>, <span class="string">"ultimateAnswer"</span>&#125;)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ExampleBean</span><span class="params">(<span class="keyword">int</span> years, String ultimateAnswer)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.years = years;</span><br><span class="line">        <span class="keyword">this</span>.ultimateAnswer = ultimateAnswer;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>静态工厂方法的参数由 <constructor-arg>元素提供，与实际使用的构造函数完全相同。工厂方法返回类的类型不必与包含静态工厂方法的类完全相同</constructor-arg></p>
+<p>可以将bean的属性和构造函数参数定义为其他bean的引用，或者作为其内联定义的值。Spring可以允许基于XML的配置元数据(定义bean)中使用子元素<property> and <constructor-arg></constructor-arg></property></p>
+<p>以下示例使用<a href="https://github.com/wzr1005/DocsHome-spring-docs/blob/master/pages/core/IoC-container.md#beans-p-namespace" target="_blank" rel="noopener">p命名空间</a>进行更简洁的XML配置：</p>
+<p><img src="C:\Users\wallacezh\AppData\Roaming\Typora\typora-user-images\image-20201029181410474.png" alt="image-20201029181410474"></p>
+<p>定义在<bean> 元素的<property>或者<constructor-arg>元素之内的bean叫做内部bean,如下例所示：</constructor-arg></property></bean></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=<span class="string">"outer"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"..."</span>&gt;</span><br><span class="line">    &lt;!-- instead of using a reference to a target bean, simply define the target bean inline --&gt;</span><br><span class="line">    &lt;property name=<span class="string">"target"</span>&gt;</span><br><span class="line">        &lt;bean <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.example.Person"</span>&gt; &lt;!-- <span class="keyword">this</span> is the inner bean --&gt;</span><br><span class="line">            &lt;property name=<span class="string">"name"</span> value=<span class="string">"Fiona Apple"</span>/&gt;</span><br><span class="line">            &lt;property name=<span class="string">"age"</span> value=<span class="string">"25"</span>/&gt;</span><br><span class="line">        &lt;/bean&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
+<p>内部bean定义不需要定义的ID或名称。如果指定，则容器不使用此类值作为标识符。容器还会在创建时忽略<code>scope</code> 标签，因为内部bean始终是匿名的，并且始终使用外部bean创建。 开发者是无法将内部bean注入到外部bean以外的其他bean中的。<strong>内部bean通常只是供给它的外部bean使用。</strong></p>
+<p>使用名字获取bean需要进行强转，id则（为什么）</p>
+<p>根据类型可以找到俩个user（user2），所以要类型+id</p>
+<p>plugins 插件</p>
 
   
 
@@ -887,7 +985,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序必备技术点"><span class="toc-number">1.</span> <span class="toc-text">小程序必备技术点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序注册流程"><span class="toc-number">2.</span> <span class="toc-text">小程序注册流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-Word第一个小程序demo"><span class="toc-number">3.</span> <span class="toc-text">Hello Word第一个小程序demo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#运行微信官方demo"><span class="toc-number">3.1.</span> <span class="toc-text">运行微信官方demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#debug"><span class="toc-number">3.2.</span> <span class="toc-text">debug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据绑定"><span class="toc-number">3.3.</span> <span class="toc-text">数据绑定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wx-if-vs-hidden"><span class="toc-number">3.4.</span> <span class="toc-text">wx:if vs hidden</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模板的概念"><span class="toc-number">3.5.</span> <span class="toc-text">模板的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WXS模块"><span class="toc-number">3.6.</span> <span class="toc-text">WXS模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序的flex布局"><span class="toc-number">3.7.</span> <span class="toc-text">小程序的flex布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件"><span class="toc-number">3.8.</span> <span class="toc-text">组件</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序和后台API通信"><span class="toc-number">0.1.</span> <span class="toc-text">小程序和后台API通信</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spring"><span class="toc-number">1.</span> <span class="toc-text">spring</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#maven的介绍与使用"><span class="toc-number">1.1.</span> <span class="toc-text">maven的介绍与使用</span></a></li></ol></li>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序必备技术点"><span class="toc-number">1.</span> <span class="toc-text">小程序必备技术点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序注册流程"><span class="toc-number">2.</span> <span class="toc-text">小程序注册流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-Word第一个小程序demo"><span class="toc-number">3.</span> <span class="toc-text">Hello Word第一个小程序demo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#运行微信官方demo"><span class="toc-number">3.1.</span> <span class="toc-text">运行微信官方demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#debug"><span class="toc-number">3.2.</span> <span class="toc-text">debug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据绑定"><span class="toc-number">3.3.</span> <span class="toc-text">数据绑定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wx-if-vs-hidden"><span class="toc-number">3.4.</span> <span class="toc-text">wx:if vs hidden</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模板的概念"><span class="toc-number">3.5.</span> <span class="toc-text">模板的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WXS模块"><span class="toc-number">3.6.</span> <span class="toc-text">WXS模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序的flex布局"><span class="toc-number">3.7.</span> <span class="toc-text">小程序的flex布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件"><span class="toc-number">3.8.</span> <span class="toc-text">组件</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number"></span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#小程序和后台API通信"><span class="toc-number">0.1.</span> <span class="toc-text">小程序和后台API通信</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spring"><span class="toc-number">1.</span> <span class="toc-text">spring</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#maven的介绍与使用"><span class="toc-number">1.1.</span> <span class="toc-text">maven的介绍与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#组合基于XML的元数据配置"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">组合基于XML的元数据配置</span></a></li></ol></li></ol></li>
                     </div>
                 </span>
             </div>
