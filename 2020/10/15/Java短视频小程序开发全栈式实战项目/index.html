@@ -29,7 +29,7 @@
 <meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201028184334949.png">
 <meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201028170826544.png">
 <meta property="og:image" content="c:/Users/wallacezh/AppData/Roaming/Typora/typora-user-images/image-20201029181410474.png">
-<meta property="og:updated_time" content="2020-11-02T06:07:45.058Z">
+<meta property="og:updated_time" content="2020-11-09T08:02:19.889Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java短视频小程序开发全栈式实战项目">
 <meta name="twitter:description" content="创建于2020年10月15日 小程序必备技术点HTML、CSS、JavaScript、spring、spring boot、springMVC了解Linux、mybatis以及maven的基本使用、Mysql、Maria DB以及其他一些关系型数据库 并不是所有app都适应小程序  基于腾讯庞大的社交群体，可以为原生app导流 创业公司优先推出小程序，开发成本低 当作简单的工具使用，需要在app上">
@@ -825,6 +825,25 @@
 <p>那么问题来了，在用作栈时到底<strong>用ArrayDeque好还是LinkedList好</strong>呢？</p>
 <p>笔者经过50W数据量的测试，发现两者性能基本接近，<code>ArrayDeque</code>平均耗时在18-24ms，<code>LinkedList</code>耗时平均在20-28ms。</p>
 <p>如果数据量上升到100W的话，<code>ArrayDeque</code>的优势会更明显。</p>
+<p>Deque 含义是Double ended queue 即双端队列，既可以当栈使用，也可以当队列使用</p>
+<p>有序容器TreeMap,TreeSet，PriorityQueue(优先级队列),</p>
+<p>使用p命名空间 简化基于setter属性注入XML配置，不需要使用property，直接在bean定义时 后面接p=””</p>
+<p>xmlns:……alt+enter</p>
+<p>自动注入：一般用注解实现</p>
+<ul>
+<li>内部bean</li>
+<li>ref引用外部bean property(麻烦)</li>
+</ul>
+<p>autowire=”bytype”，类型匹配，自动注入。 多个此类型的bean会报错，或者没有匹配到，会报错</p>
+<p>byname,根据set方法的名字去匹配，public void setxxx(){…}</p>
+<p>根据构造器去匹配：优先根据名字去匹配，假如名字没有匹配到，会根据参数类型type去匹配，进行完整的匹配注入；如果构造函数的参数Person(Wife wife3,User user) ,ioc容器里面必须要同时有wife和user</p>
+<p>primary 最主要注入的bean,</p>
+<p>控制bean生命周期行为：</p>
+<ul>
+<li>InitializingBean 和 DisposableBean回调接口</li>
+<li>自定义init()和destroy()方法</li>
+<li>@PostConstruct和@PreDestroy注解</li>
+</ul>
 
   
 
