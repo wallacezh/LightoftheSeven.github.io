@@ -7,15 +7,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: github | Wzr&#39;s blog</title>
+  <title>Java刷Leetcode的各种case输入方法接口 | Wzr&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Wzr&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/tags/github/index.html">
+  <meta name="description" content="先写了int[]数组、Array数组、链表、树 int[]: case输入 1,2,3,4 12345678910111213 public static int[] getint() &amp;#123;        //静态方法是不能访问非静态变量的        Scanner scanner = new Scanner((System.in));        String str = scan">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java刷Leetcode的各种case输入方法接口">
+<meta property="og:url" content="http://yoursite.com/2021/02/05/Java刷Leetcode的各种case输入方法接口/index.html">
 <meta property="og:site_name" content="Wzr&#39;s blog">
+<meta property="og:description" content="先写了int[]数组、Array数组、链表、树 int[]: case输入 1,2,3,4 12345678910111213 public static int[] getint() &amp;#123;        //静态方法是不能访问非静态变量的        Scanner scanner = new Scanner((System.in));        String str = scan">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-02-05T14:45:46.300Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wzr&#39;s blog">
+<meta name="twitter:title" content="Java刷Leetcode的各种case输入方法接口">
+<meta name="twitter:description" content="先写了int[]数组、Array数组、链表、树 int[]: case输入 1,2,3,4 12345678910111213 public static int[] getint() &amp;#123;        //静态方法是不能访问非静态变量的        Scanner scanner = new Scanner((System.in));        String str = scan">
   
     <link rel="alternative" href="/atom.xml" title="Wzr&#39;s blog" type="application/atom+xml">
   
@@ -169,60 +173,210 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="l-Java刷Leetcode的各种case输入方法接口" class="article article-type-l " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/24/学习github/" class="archive-article-date">
-  	<time datetime="2019-02-24T06:48:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/24/学习github/">学习Github</a>
+    <h1 class="article-title" itemprop="name">
+      Java刷Leetcode的各种case输入方法接口
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2021/02/05/Java刷Leetcode的各种case输入方法接口/" class="archive-article-date">
+  	<time datetime="2021-02-05T14:31:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <div id="busuanzi_container_page_pv" style="font-size:16px;color:rgb(153,153,153);line-height:1.8em;">总阅读量<span id="busuanzi_value_page_pv"></span>次</div>
+    <p>先写了int[]数组、Array数组、链表、树<br> int[]: case输入 1,2,3,4<br> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] getint() &#123;</span><br><span class="line">        <span class="comment">//静态方法是不能访问非静态变量的</span></span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner((System.in));</span><br><span class="line">        String str = scanner.next().toString();</span><br><span class="line"><span class="comment">//        str=str.substring(1,str.length()-1);//substring是左闭右开的，不取右边的东西</span></span><br><span class="line"><span class="comment">//        str=removeCharAt(str,3);</span></span><br><span class="line">        String[] arr = str.split(<span class="string">","</span>);</span><br><span class="line">        <span class="keyword">int</span>[] num=<span class="keyword">new</span> <span class="keyword">int</span>[arr.length];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            num[i]=Integer.parseInt(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>获得：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] nums=getint();</span><br></pre></td></tr></table></figure></p>
+<p>Array数组:case输入 1,2,3,4<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ArrayList&lt;Integer&gt; <span class="title">getArrayList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner((System.in));</span><br><span class="line">        String str = scanner.next().toString();</span><br><span class="line">        String[] arr = str.split(<span class="string">","</span>);</span><br><span class="line">        ArrayList&lt;Integer&gt; array=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            array.add(Integer.parseInt(arr[i]));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> array;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>链表：case输入：1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ListNode <span class="title">getListNode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String str = sc.next().toString();</span><br><span class="line">        String[] arr = str.split(<span class="string">"-&gt;"</span>);</span><br><span class="line">        ListNode list=<span class="keyword">new</span> ListNode();</span><br><span class="line">        ListNode ans=list;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length-<span class="number">2</span>; i++) &#123;</span><br><span class="line">            list.next=<span class="keyword">new</span> ListNode();</span><br><span class="line">            list.val=Integer.parseInt(arr[i]);</span><br><span class="line">            list = list.next;</span><br><span class="line">        &#125;</span><br><span class="line">        list.val=Integer.parseInt(arr[arr.length-<span class="number">2</span>]);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line"><span class="comment">//        1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</span></span><br><span class="line"><span class="comment">//        输出1-&gt;2-&gt;3-&gt;4-&gt;5</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>获得：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ListNode head = getListNode();</span><br></pre></td></tr></table></figure></p>
+<p>树：case输入：1,null,3,4<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> TreeNode <span class="title">getTreeNode</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String str=sc.next().toString();</span><br><span class="line">        String[] arr=str.split(<span class="string">","</span>);</span><br><span class="line">        Integer[] nums=<span class="keyword">new</span> Integer[arr.length];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[i].equals(<span class="string">"null"</span>))&#123;</span><br><span class="line">                nums[i]=<span class="keyword">null</span>;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            nums[i]=Integer.parseInt(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(nums.length==<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">new</span> TreeNode(<span class="number">0</span>);</span><br><span class="line">        Deque&lt;TreeNode&gt; nodeQueue=<span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="comment">//创建一个根节点</span></span><br><span class="line">        TreeNode root=<span class="keyword">new</span> TreeNode(nums[<span class="number">0</span>]);</span><br><span class="line">        nodeQueue.offer(root);</span><br><span class="line">        TreeNode cur;</span><br><span class="line">        <span class="comment">//记录当前行节点的数量，有些地方是空</span></span><br><span class="line">        <span class="keyword">int</span> lineNodeNum=<span class="number">2</span>;<span class="comment">//第一次遇到null的时候 也是占一个格子的</span></span><br><span class="line">        <span class="keyword">int</span> startIndex=<span class="number">1</span>;<span class="comment">//记录当前行中数字在数组中的开始位置，一开始左孩子的位置是1</span></span><br><span class="line">        <span class="keyword">int</span> restLength=nums.length-<span class="number">1</span>;<span class="comment">//记录数组中剩余的元素的数量</span></span><br><span class="line">        <span class="keyword">while</span>(restLength&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="comment">//for循环每次开启新的一行</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=startIndex;i&lt;startIndex+lineNodeNum;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">                <span class="comment">//此处说明nums的数字用完，此时应停止遍历，并可以直接返回root</span></span><br><span class="line">                <span class="keyword">if</span>(i==nums.length) <span class="keyword">return</span> root;</span><br><span class="line">                cur=nodeQueue.poll();</span><br><span class="line">                <span class="keyword">if</span>(nums[i]!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                    cur.left=<span class="keyword">new</span> TreeNode((nums[i]));</span><br><span class="line">                    nodeQueue.offer(cur.left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">//同上，说明已经用完</span></span><br><span class="line">                <span class="keyword">if</span>(i==nums.length-<span class="number">1</span>) <span class="keyword">return</span> root;</span><br><span class="line">                <span class="keyword">if</span>(nums[i+<span class="number">1</span>]!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                    cur.right=<span class="keyword">new</span> TreeNode(nums[i+<span class="number">1</span>]);</span><br><span class="line">                    nodeQueue.offer(cur.right);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            startIndex+=lineNodeNum;<span class="comment">//新的一行？</span></span><br><span class="line">            restLength-=lineNodeNum;<span class="comment">//减去上一行的元素数目</span></span><br><span class="line">            lineNodeNum=nodeQueue.size()*<span class="number">2</span>;<span class="comment">//默认null也算元素个数？</span></span><br><span class="line">            <span class="comment">//上一层空的没进  不算</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>获得：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TreeNode root = getTreeNode();</span><br></pre></td></tr></table></figure></p>
+<p>调试的时候需要打印，重载print方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(ListNode head)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(head.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.print(head.val+<span class="string">"-&gt;"</span>);</span><br><span class="line">            head=head.next;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(head.val);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span>[] nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length-<span class="number">1</span>; i++) &#123;</span><br><span class="line">            System.out.printf(nums[i]+<span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(nums[nums.length-<span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">        Queue&lt;TreeNode&gt; queue=<span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        TreeNode curr=root;</span><br><span class="line">        <span class="keyword">while</span>(curr!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.print(curr.val+<span class="string">" "</span>);</span><br><span class="line">            <span class="keyword">if</span>(curr.left!=<span class="keyword">null</span>) queue.add(curr.left);</span><br><span class="line">            <span class="keyword">if</span>(curr.right!=<span class="keyword">null</span>) queue.add(curr.right);</span><br><span class="line">            curr=queue.poll();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-          
+  
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechatpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="https://img.wallacezh.com/qrcode.php?url=https://wallacezh.github.iohttp://yoursite.com/2021/02/05/Java刷Leetcode的各种case输入方法接口/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/10/15/Java短视频小程序开发全栈式实战项目/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java短视频小程序开发全栈式实战项目</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '8f3a5336c7cd17cf678e',
+  	clientSecret: 'bde98e5f0ed9f4939457fbf51faa7c3b63b0b6bd',
+  	repo: 'wzr1005.github.io',
+  	owner: 'wzr1005',
+  	admin: ['wzr1005'],
+  	id: 'Fri Feb 05 2021 22:31:10 GMT+0800',
+  	distractionFreeMode: 'false'
+})
+gitalk.render('gitalk-container')
+}
+</script>
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -250,9 +404,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,

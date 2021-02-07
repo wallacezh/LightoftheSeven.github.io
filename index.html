@@ -171,6 +171,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="l-Java刷Leetcode的各种case输入方法接口" class="article article-type-l  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/05/Java刷Leetcode的各种case输入方法接口/">Java刷Leetcode的各种case输入方法接口</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/05/Java刷Leetcode的各种case输入方法接口/" class="archive-article-date">
+  	<time datetime="2021-02-05T14:31:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <div id="busuanzi_container_page_pv" style="font-size:16px;color:rgb(153,153,153);line-height:1.8em;">总阅读量<span id="busuanzi_value_page_pv"></span>次</div>
+    <p>先写了int[]数组、Array数组、链表、树<br> int[]: case输入 1,2,3,4<br> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] getint() &#123;</span><br><span class="line">        <span class="comment">//静态方法是不能访问非静态变量的</span></span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner((System.in));</span><br><span class="line">        String str = scanner.next().toString();</span><br><span class="line"><span class="comment">//        str=str.substring(1,str.length()-1);//substring是左闭右开的，不取右边的东西</span></span><br><span class="line"><span class="comment">//        str=removeCharAt(str,3);</span></span><br><span class="line">        String[] arr = str.split(<span class="string">","</span>);</span><br><span class="line">        <span class="keyword">int</span>[] num=<span class="keyword">new</span> <span class="keyword">int</span>[arr.length];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            num[i]=Integer.parseInt(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>获得：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] nums=getint();</span><br></pre></td></tr></table></figure></p>
+<p>Array数组:case输入 1,2,3,4<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ArrayList&lt;Integer&gt; <span class="title">getArrayList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner((System.in));</span><br><span class="line">        String str = scanner.next().toString();</span><br><span class="line">        String[] arr = str.split(<span class="string">","</span>);</span><br><span class="line">        ArrayList&lt;Integer&gt; array=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            array.add(Integer.parseInt(arr[i]));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> array;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>链表：case输入：1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ListNode <span class="title">getListNode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String str = sc.next().toString();</span><br><span class="line">        String[] arr = str.split(<span class="string">"-&gt;"</span>);</span><br><span class="line">        ListNode list=<span class="keyword">new</span> ListNode();</span><br><span class="line">        ListNode ans=list;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length-<span class="number">2</span>; i++) &#123;</span><br><span class="line">            list.next=<span class="keyword">new</span> ListNode();</span><br><span class="line">            list.val=Integer.parseInt(arr[i]);</span><br><span class="line">            list = list.next;</span><br><span class="line">        &#125;</span><br><span class="line">        list.val=Integer.parseInt(arr[arr.length-<span class="number">2</span>]);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line"><span class="comment">//        1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</span></span><br><span class="line"><span class="comment">//        输出1-&gt;2-&gt;3-&gt;4-&gt;5</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>获得：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ListNode head = getListNode();</span><br></pre></td></tr></table></figure></p>
+<p>树：case输入：1,null,3,4<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> TreeNode <span class="title">getTreeNode</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String str=sc.next().toString();</span><br><span class="line">        String[] arr=str.split(<span class="string">","</span>);</span><br><span class="line">        Integer[] nums=<span class="keyword">new</span> Integer[arr.length];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[i].equals(<span class="string">"null"</span>))&#123;</span><br><span class="line">                nums[i]=<span class="keyword">null</span>;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            nums[i]=Integer.parseInt(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(nums.length==<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">new</span> TreeNode(<span class="number">0</span>);</span><br><span class="line">        Deque&lt;TreeNode&gt; nodeQueue=<span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="comment">//创建一个根节点</span></span><br><span class="line">        TreeNode root=<span class="keyword">new</span> TreeNode(nums[<span class="number">0</span>]);</span><br><span class="line">        nodeQueue.offer(root);</span><br><span class="line">        TreeNode cur;</span><br><span class="line">        <span class="comment">//记录当前行节点的数量，有些地方是空</span></span><br><span class="line">        <span class="keyword">int</span> lineNodeNum=<span class="number">2</span>;<span class="comment">//第一次遇到null的时候 也是占一个格子的</span></span><br><span class="line">        <span class="keyword">int</span> startIndex=<span class="number">1</span>;<span class="comment">//记录当前行中数字在数组中的开始位置，一开始左孩子的位置是1</span></span><br><span class="line">        <span class="keyword">int</span> restLength=nums.length-<span class="number">1</span>;<span class="comment">//记录数组中剩余的元素的数量</span></span><br><span class="line">        <span class="keyword">while</span>(restLength&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="comment">//for循环每次开启新的一行</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=startIndex;i&lt;startIndex+lineNodeNum;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">                <span class="comment">//此处说明nums的数字用完，此时应停止遍历，并可以直接返回root</span></span><br><span class="line">                <span class="keyword">if</span>(i==nums.length) <span class="keyword">return</span> root;</span><br><span class="line">                cur=nodeQueue.poll();</span><br><span class="line">                <span class="keyword">if</span>(nums[i]!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                    cur.left=<span class="keyword">new</span> TreeNode((nums[i]));</span><br><span class="line">                    nodeQueue.offer(cur.left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">//同上，说明已经用完</span></span><br><span class="line">                <span class="keyword">if</span>(i==nums.length-<span class="number">1</span>) <span class="keyword">return</span> root;</span><br><span class="line">                <span class="keyword">if</span>(nums[i+<span class="number">1</span>]!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                    cur.right=<span class="keyword">new</span> TreeNode(nums[i+<span class="number">1</span>]);</span><br><span class="line">                    nodeQueue.offer(cur.right);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            startIndex+=lineNodeNum;<span class="comment">//新的一行？</span></span><br><span class="line">            restLength-=lineNodeNum;<span class="comment">//减去上一行的元素数目</span></span><br><span class="line">            lineNodeNum=nodeQueue.size()*<span class="number">2</span>;<span class="comment">//默认null也算元素个数？</span></span><br><span class="line">            <span class="comment">//上一层空的没进  不算</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>获得：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TreeNode root = getTreeNode();</span><br></pre></td></tr></table></figure></p>
+<p>调试的时候需要打印，重载print方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(ListNode head)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(head.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.print(head.val+<span class="string">"-&gt;"</span>);</span><br><span class="line">            head=head.next;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(head.val);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span>[] nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length-<span class="number">1</span>; i++) &#123;</span><br><span class="line">            System.out.printf(nums[i]+<span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(nums[nums.length-<span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">        Queue&lt;TreeNode&gt; queue=<span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        TreeNode curr=root;</span><br><span class="line">        <span class="keyword">while</span>(curr!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.print(curr.val+<span class="string">" "</span>);</span><br><span class="line">            <span class="keyword">if</span>(curr.left!=<span class="keyword">null</span>) queue.add(curr.left);</span><br><span class="line">            <span class="keyword">if</span>(curr.right!=<span class="keyword">null</span>) queue.add(curr.right);</span><br><span class="line">            curr=queue.poll();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+  
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/05/Java刷Leetcode的各种case输入方法接口/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java短视频小程序开发全栈式实战项目" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1320,91 +1393,6 @@
 
 
   
-    <article id="post-爬虫开发实战" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/14/爬虫开发实战/">爬虫开发实战</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/14/爬虫开发实战/" class="archive-article-date">
-  	<time datetime="2019-03-13T18:26:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://i.loli.net/2019/03/14/5c8a3d14477b2.jpeg" width="800" height="450"></p>
-<h1 id="请求库的安装"><a href="#请求库的安装" class="headerlink" title="请求库的安装"></a>请求库的安装</h1><h2 id="jupyter-设置默认浏览器为chrome"><a href="#jupyter-设置默认浏览器为chrome" class="headerlink" title="jupyter 设置默认浏览器为chrome"></a>jupyter 设置默认浏览器为chrome</h2>
-        
-          <a class="article-more-a" href="/2019/03/14/爬虫开发实战/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Anaconda</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">python3.7</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/14/爬虫开发实战/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1419,7 +1407,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 云雾见天明
+    		&copy; 2021 云雾见天明
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1519,6 +1507,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">python 3.7</a>
               </li>
             
@@ -1531,19 +1523,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">vs</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">yilia</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">vs</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -1555,15 +1543,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">树状数组</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -1575,11 +1555,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">atom</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
               <li class="article-tag-list-item">
